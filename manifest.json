@@ -1,0 +1,9 @@
+{
+  "id": "wemd",
+  "name": "WeMD for Obsidian",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "将 Markdown 笔记按 WeMD 主题排版，实时预览并一键复制到微信公众号。",
+  "author": "Vito Wang",
+  "isDesktopOnly": true
+}
