@@ -1,5 +1,5 @@
 export const academicPaperTheme = `/* 学术论文风格 */
-#wemd {
+#mp {
     padding: 5px 20px;
     max-width: 677px;
     margin: 0 auto;
@@ -12,7 +12,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
 }
 
 /* 正文 - 移除首行缩进，改用段间距适应移动端 */
-#wemd p {
+#mp p {
     margin: 16px 0;
     line-height: 1.7;
     text-align: justify;
@@ -22,25 +22,25 @@ export const academicPaperTheme = `/* 学术论文风格 */
 }
 
 /* 一级标题 - 居中论文题 */
-#wemd h1 {
+#mp h1 {
     margin: 40px 0 30px;
     text-align: center;
     line-height: 1.4;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
     font-size: 22px;
     font-weight: bold;
     color: #000;
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix {
     display: none;
 }
 
 /* 二级标题 - 章节 Section */
-#wemd h2 {
+#mp h2 {
     margin: 30px 0 15px;
     text-align: left;
     border-bottom: 2px solid #000;
@@ -48,40 +48,40 @@ export const academicPaperTheme = `/* 学术论文风格 */
     padding-bottom: 8px;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
     font-size: 18px;
     font-weight: bold;
     color: #000;
 }
 
-#wemd h2 .prefix,
-#wemd h2 .suffix {
+#mp h2 .prefix,
+#mp h2 .suffix {
     display: none;
 }
 
 /* 三级标题 - Subsection */
-#wemd h3 {
+#mp h3 {
     margin: 20px 0 10px;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
     font-size: 16px;
     font-weight: bold;
     color: #800000;
     /* 栗色，区分层级 */
 }
 
-#wemd h3 .prefix,
-#wemd h3 .suffix {
+#mp h3 .prefix,
+#mp h3 .suffix {
     display: none;
 }
 
 /* 四级标题 */
-#wemd h4 {
+#mp h4 {
     margin: 15px 0 5px;
 }
 
-#wemd h4 .content {
+#mp h4 .content {
     font-size: 16px;
     font-weight: bold;
     font-style: italic;
@@ -89,13 +89,13 @@ export const academicPaperTheme = `/* 学术论文风格 */
     color: #333;
 }
 
-#wemd h4 .prefix,
-#wemd h4 .suffix {
+#mp h4 .prefix,
+#mp h4 .suffix {
     display: none;
 }
 
 /* 引用 - 简洁边框 */
-#wemd .multiquote-1 {
+#mp .multiquote-1 {
     margin: 20px 0;
     padding: 16px 20px;
     background: #fafafa;
@@ -103,7 +103,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
     border-left: 4px solid #666;
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
     color: #555;
     font-size: 15px;
     margin: 0;
@@ -111,107 +111,107 @@ export const academicPaperTheme = `/* 学术论文风格 */
     text-indent: 0;
 }
 
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
     margin: 18px 0 18px 20px;
     padding: 14px 18px;
     background: #fafafa;
     border: 1px solid #ddd;
 }
 
-#wemd .multiquote-2 p {
+#mp .multiquote-2 p {
     color: #555;
     font-size: 15px;
     margin: 0;
 }
 
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
     margin: 16px 0 16px 20px;
     padding: 12px 16px;
     background: #fcfcfc;
     border: 1px solid #e0e0e0;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
     color: #555;
     font-size: 15px;
     margin: 0;
 }
 
 /* 列表 */
-#wemd ul {
+#mp ul {
     list-style: disc;
     padding-left: 20px;
     margin: 16px 0;
 }
 
-#wemd ul ul {
+#mp ul ul {
     list-style-type: square;
     margin-top: 5px;
 }
 
-#wemd ol {
+#mp ol {
     list-style: decimal;
     padding-left: 20px;
     margin: 16px 0;
 }
 
-#wemd ol ol {
+#mp ol ol {
     list-style-type: lower-alpha;
 }
 
-#wemd li section {
+#mp li section {
     color: #333;
     line-height: 1.6;
 }
 
 /* 链接 - 经典深蓝 */
-#wemd a {
+#mp a {
     color: #000080;
     text-decoration: underline;
 }
 
 /* 加粗 */
-#wemd strong {
+#mp strong {
     color: #000;
     font-weight: bold;
 }
 
 /* 斜体 */
-#wemd em {
+#mp em {
     font-style: italic;
     color: #000;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
     font-weight: bold;
     font-style: italic;
     color: #000;
 }
 
 /* 高亮 - 学术标记风格 */
-#wemd mark {
+#mp mark {
     background: #fff3cd;
     color: #000;
     padding: 0 2px;
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
     text-decoration: line-through;
     color: #666;
     opacity: 0.7;
 }
 
 /* 图片 - 简洁无装饰 */
-#wemd img {
+#mp img {
     display: block;
     margin: 30px auto;
     width: 100%;
     border: 1px solid #ddd;
 }
 
-#wemd figcaption {
+#mp figcaption {
     margin-top: 8px;
     text-align: center;
     color: #666;
@@ -223,10 +223,10 @@ export const academicPaperTheme = `/* 学术论文风格 */
  * 行内代码 - LaTeX \texttt 风格 (修复重点)
  * 纯黑文字 + 极淡灰底 + 等宽字体
  */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
     color: #000;
     /* 纯黑 */
     background: #f4f4f4;
@@ -243,7 +243,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
 
 /* 代码块 - 简单的学术风格 */
 /* 注意：不要设置 color，让语法高亮主题控制文字颜色 */
-#wemd pre code.hljs {
+#mp pre code.hljs {
     background: #f9f9f9;
     border: 1px solid #ccc;
     /* color 由 .hljs 语法高亮主题控制 */
@@ -258,12 +258,12 @@ export const academicPaperTheme = `/* 学术论文风格 */
 }
 
 /* 如果没有语法高亮，设置默认颜色 */
-#wemd pre code:not(.hljs) {
+#mp pre code:not(.hljs) {
     color: #333;
 }
 
 /* 表格 - 经典三线表 */
-#wemd table {
+#mp table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -272,7 +272,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
     border-bottom: 2px solid #000;
 }
 
-#wemd table tr th {
+#mp table tr th {
     border-bottom: 1px solid #000;
     padding: 10px 5px;
     font-weight: bold;
@@ -280,7 +280,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
     background: #fff;
 }
 
-#wemd table tr td {
+#mp table tr td {
     padding: 10px 5px;
     border: none;
     text-align: center;
@@ -288,17 +288,17 @@ export const academicPaperTheme = `/* 学术论文风格 */
 }
 
 /* 隔行微底色 */
-#wemd table tr:nth-child(even) td {
+#mp table tr:nth-child(even) td {
     background-color: #fafafa;
 }
 
 /* 脚注 */
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
     color: #000080;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
     border-top: 1px solid #ccc;
     padding-top: 10px;
     margin-top: 40px;
@@ -306,7 +306,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
     /* 短线 */
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
     font-weight: bold;
     color: #000;
     margin-right: 4px;
@@ -314,24 +314,24 @@ export const academicPaperTheme = `/* 学术论文风格 */
     font-size: 10px;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
     color: #666;
     font-size: 12px;
     margin: 4px 0;
 }
 
 /* 公式 */
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
     max-width: 100% !important;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
     max-width: 100%;
     vertical-align: middle;
 }
 
 /* 提示块 - 学术风格 */
-#wemd .callout {
+#mp .callout {
     margin: 20px 0;
     padding: 16px 20px;
     border: 1px solid #ddd;
@@ -339,7 +339,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
     background: #fafafa;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 14px;
@@ -347,37 +347,37 @@ export const academicPaperTheme = `/* 学术论文风格 */
     color: #000;
 }
 
-#wemd .callout-icon { margin-right: 8px;
+#mp .callout-icon { margin-right: 8px;
     margin-right: 6px;
 }
 
-#wemd .callout-note { 
+#mp .callout-note { 
     border-left: 4px solid #666; 
     background: #f5f5f5;
 }
 
-#wemd .callout-tip { 
+#mp .callout-tip { 
     border-left: 4px solid #555; 
     background: #f5f5f5;
 }
 
-#wemd .callout-important { 
+#mp .callout-important { 
     border-left: 4px solid #888; 
     background: #f5f5f5;
 }
 
-#wemd .callout-warning { 
+#mp .callout-warning { 
     border-left: 4px solid #999; 
     background: #f5f5f5;
 }
 
-#wemd .callout-caution { 
+#mp .callout-caution { 
     border-left: 4px solid #000; 
     background: #f5f5f5;
 }
 
 /* Imageflow CSS */
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   /* white-space: normal; */
@@ -386,13 +386,13 @@ export const academicPaperTheme = `/* 学术论文风格 */
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -402,7 +402,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -411,7 +411,7 @@ export const academicPaperTheme = `/* 学术论文风格 */
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;

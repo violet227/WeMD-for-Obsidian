@@ -1,0 +1,40 @@
+import type { Theme } from '../../types'
+import { hljsDark } from '../../hljs-maps'
+
+/** 经典蓝 */
+export const theme: Theme = {
+  id: 'classic-blue',
+  name: '经典蓝',
+  description: '反白色块标题，科技商业的纸媒感',
+  category: 'expressive',
+  previewBackground: '#ffffff',
+  hljsStyleMap: hljsDark,
+  styles: {
+    root: 'color:#3a3a3a;font-size:15px;line-height:1.8;word-break:break-word;letter-spacing:0.3px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;',
+    h1: 'margin:1.7em 0 1em;font-size:1.5em;font-weight:700;color:#1a6db5;text-align:center;border-bottom:2px solid #1a6db5;padding-bottom:0.5em;',
+    h2: 'margin:1.8em 0 0.7em;font-size:1.15em;font-weight:700;color:#ffffff;background:#1a6db5;padding:6px 14px 5px;border-radius:4px;display:inline-block;border-bottom:2px solid #14527d;',
+    h3: 'margin:1.6em 0 0.8em;font-size:1.1em;font-weight:700;color:#1a6db5;border-left:4px solid #1a6db5;padding-left:10px;',
+    h4: 'margin:1.3em 0 0.6em;font-size:1.02em;font-weight:700;color:#444444;',
+    h5: 'margin:1.2em 0 0.5em;font-size:1em;font-weight:600;color:#444444;',
+    h6: 'margin:1.1em 0 0.4em;font-size:0.92em;font-weight:600;color:#666666;',
+    p: 'margin:1em 0;',
+    a: 'color:#1a6db5;text-decoration:none;border-bottom:1px solid #1a6db5;',
+    strong: 'color:#1a6db5;font-weight:700;',
+    em: 'font-style:italic;color:#555555;',
+    del: 'text-decoration:line-through;color:#aaaaaa;',
+    ul: 'margin:1em 0;padding-left:1.6em;',
+    ol: 'margin:1em 0;padding-left:1.6em;',
+    li: 'margin:0.4em 0;line-height:1.7;',
+    blockquote: 'margin:1.4em 0;padding:12px 16px;border-left:4px solid #1a6db5;background:#f2f8fd;color:#555555;',
+    code: 'color:#1a6db5;background:#ebf5ff;padding:2px 6px;border-radius:4px;font-size:0.88em;font-family:"SFMono-Regular",Consolas,Menlo,monospace;',
+    codeBlock: 'font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;line-height:1.7;color:#abb2bf;',
+    codeBlockWrapper: 'background:#0f2a44;padding:16px;border-radius:8px;overflow-x:auto;margin:1.4em 0;border:1px solid #1a6db5;',
+    table: 'border-collapse:collapse;margin:1.4em 0;width:100%;font-size:0.95em;',
+    thead: '',
+    th: 'background:#ebf5ff;padding:9px 13px;font-weight:600;border:1px solid #cfe4f5;color:#14527d;',
+    td: 'padding:9px 13px;border:1px solid #cfe4f5;',
+    tr: '',
+    img: 'max-width:100%;border-radius:6px;display:block;margin:1.4em auto;',
+    hr: 'border:none;height:1px;background:#bcd9f2;margin:2em 0;',
+  },
+}

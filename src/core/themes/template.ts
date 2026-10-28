@@ -1,12 +1,12 @@
 export const templateTheme = `/*
  * ============================================
- * WeMD 主题模板
+ * 主题模板
  * ============================================
  * 
  * 使用说明：
  * 1. 修改下方的样式定义，创建你的自定义主题
- * 2. 所有选择器必须以 #wemd 开头
- * 3. 代码块使用 #wemd pre code.hljs，不要设置全局 color
+ * 2. 所有选择器必须以 #mp 开头
+ * 3. 代码块使用 #mp pre code.hljs，不要设置全局 color
  * 
  * ============================================
  * 🌙 深色模式说明（微信兼容）
@@ -39,7 +39,7 @@ export const templateTheme = `/*
  * 1. 全局容器样式
  * ============================================
  */
-#wemd {
+#mp {
     padding: 30px 20px;
     max-width: 677px;
     margin: 0 auto;
@@ -54,7 +54,7 @@ export const templateTheme = `/*
  * 2. 段落样式
  * ============================================
  */
-#wemd p {
+#mp p {
     margin: 16px 0;
     /* 段落间距：上下各 16px */
     line-height: 1.7;
@@ -81,14 +81,14 @@ export const templateTheme = `/*
  */
 
 /* 一级标题 */
-#wemd h1 {
+#mp h1 {
     margin: 40px 0 30px;
     /* 外边距：上 40px，下 30px */
     text-align: center;
     /* 居中对齐 */
 }
 
-#wemd h1 .content {
+#mp h1 .content {
     font-size: 24px;
     /* 字体大小 */
     font-weight: bold;
@@ -98,56 +98,56 @@ export const templateTheme = `/*
 }
 
 /* 隐藏前缀和后缀（如果不需要装饰） */
-#wemd h1 .prefix,
-#wemd h1 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix {
     display: none;
 }
 
 /* 二级标题 */
-#wemd h2 {
+#mp h2 {
     margin: 30px 0 20px;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
     font-size: 20px;
     font-weight: bold;
     color: #333;
 }
 
-#wemd h2 .prefix,
-#wemd h2 .suffix {
+#mp h2 .prefix,
+#mp h2 .suffix {
     display: none;
 }
 
 /* 三级标题 */
-#wemd h3 {
+#mp h3 {
     margin: 25px 0 15px;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
     font-size: 18px;
     font-weight: bold;
     color: #666;
 }
 
-#wemd h3 .prefix,
-#wemd h3 .suffix {
+#mp h3 .prefix,
+#mp h3 .suffix {
     display: none;
 }
 
 /* 四级标题 */
-#wemd h4 {
+#mp h4 {
     margin: 20px 0 10px;
 }
 
-#wemd h4 .content {
+#mp h4 .content {
     font-size: 16px;
     font-weight: bold;
     color: #666;
 }
 
-#wemd h4 .prefix,
-#wemd h4 .suffix {
+#mp h4 .prefix,
+#mp h4 .suffix {
     display: none;
 }
 
@@ -156,7 +156,7 @@ export const templateTheme = `/*
  * ============================================
  * 支持多级引用：.multiquote-1, .multiquote-2, .multiquote-3
  */
-#wemd .multiquote-1 {
+#mp .multiquote-1 {
     margin: 20px 0;
     /* 外边距 */
     padding: 16px 20px;
@@ -169,7 +169,7 @@ export const templateTheme = `/*
     /* 圆角 */
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
     margin: 0;
     /* 段落无外边距 */
     color: #666;
@@ -178,28 +178,28 @@ export const templateTheme = `/*
 }
 
 /* 二级引用 */
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
     margin: 18px 0;
     padding: 14px 18px;
     background: #fafafa;
     border-left: 3px solid #ccc;
 }
 
-#wemd .multiquote-2 p {
+#mp .multiquote-2 p {
     margin: 0;
     color: #777;
     font-size: 14px;
 }
 
 /* 三级引用 */
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
     margin: 16px 0;
     padding: 12px 16px;
     background: #fafafa;
     border-left: 2px solid #bbb;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
     margin: 0;
     color: #888;
     font-size: 14px;
@@ -209,19 +209,19 @@ export const templateTheme = `/*
  * 5. 列表样式
  * ============================================
  */
-#wemd ul,
-#wemd ol {
+#mp ul,
+#mp ol {
     margin: 15px 0;
     padding-left: 25px;
     /* 左内边距，为列表符号留空间 */
 }
 
-#wemd ul {
+#mp ul {
     list-style-type: disc;
     /* 无序列表：实心圆点 */
 }
 
-#wemd ol {
+#mp ol {
     list-style-type: decimal;
     /* 有序列表：数字 */
 }
@@ -229,7 +229,7 @@ export const templateTheme = `/*
 /* 列表项内容
  * 注意：列表项内部使用 <section> 包裹内容
  */
-#wemd li section {
+#mp li section {
     margin: 5px 0;
     /* 列表项间距 */
     color: #333;
@@ -237,12 +237,12 @@ export const templateTheme = `/*
     line-height: 1.6;
 }
 
-#wemd ul ul {
+#mp ul ul {
     list-style-type: circle;
     margin-top: 6px;
 }
 
-#wemd ol ol {
+#mp ol ol {
     list-style-type: lower-alpha;
 }
 
@@ -250,7 +250,7 @@ export const templateTheme = `/*
  * 6. 链接样式
  * ============================================
  */
-#wemd a {
+#mp a {
     color: #1e6bb8;
     /* 链接颜色 */
     text-decoration: none;
@@ -266,26 +266,26 @@ export const templateTheme = `/*
  * ============================================
  */
 /* 加粗 */
-#wemd strong {
+#mp strong {
     font-weight: bold;
     color: #000;
 }
 
 /* 斜体 */
-#wemd em {
+#mp em {
     font-style: italic;
     color: #333;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
     font-weight: bold;
     font-style: italic;
     color: #000;
 }
 
 /* 高亮 */
-#wemd mark {
+#mp mark {
     background: #fff3cd;
     color: #000;
     padding: 2px 4px;
@@ -293,7 +293,7 @@ export const templateTheme = `/*
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
     text-decoration: line-through;
     color: #999;
 }
@@ -303,10 +303,10 @@ export const templateTheme = `/*
  * ============================================
  * 注意：行内代码在段落和列表项中
  */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
     color: #e83e8c;
     /* 文字颜色 */
     background: #f8f9fa;
@@ -327,23 +327,23 @@ export const templateTheme = `/*
  * ============================================
  * 
  * ⚠️ 重要提示：
- * 1. 必须使用 #wemd pre code.hljs 选择器，不要使用 #wemd pre code
+ * 1. 必须使用 #mp pre code.hljs 选择器，不要使用 #mp pre code
  * 2. 不要设置全局 color 属性，让语法高亮主题控制文字颜色
  * 3. 如果设置了 color，会覆盖语法高亮的颜色，导致代码看不清
- * 4. 使用 #wemd pre code:not(.hljs) 作为后备样式（无语法高亮时）
+ * 4. 使用 #mp pre code:not(.hljs) 作为后备样式（无语法高亮时）
  * 
  * 示例（正确）：
- * #wemd pre code.hljs {
+ * #mp pre code.hljs {
  *     background: #f5f5f5;
  *     // 不设置 color
  * }
  * 
  * 示例（错误）：
- * #wemd pre code {
+ * #mp pre code {
  *     color: #333;  // ❌ 这会覆盖语法高亮
  * }
  */
-#wemd pre code.hljs {
+#mp pre code.hljs {
     display: block;
     padding: 16px;
     /* 内边距 */
@@ -366,7 +366,7 @@ export const templateTheme = `/*
 }
 
 /* 如果没有语法高亮，设置默认样式 */
-#wemd pre code:not(.hljs) {
+#mp pre code:not(.hljs) {
     color: #333;
     /* 默认文字颜色 */
     background: #f5f5f5;
@@ -377,7 +377,7 @@ export const templateTheme = `/*
  * 10. 图片样式
  * ============================================
  */
-#wemd img {
+#mp img {
     display: block;
     /* 块级元素 */
     margin: 20px auto;
@@ -389,13 +389,13 @@ export const templateTheme = `/*
 }
 
 /* 图片容器（figure） */
-#wemd figure {
+#mp figure {
     margin: 20px 0;
     text-align: center;
 }
 
 /* 图片说明文字（figcaption） */
-#wemd figcaption {
+#mp figcaption {
     margin-top: 8px;
     color: #999;
     font-size: 14px;
@@ -405,7 +405,7 @@ export const templateTheme = `/*
  * 11. 表格样式
  * ============================================
  */
-#wemd table {
+#mp table {
     width: 100%;
     /* 宽度：100% */
     border-collapse: collapse;
@@ -416,7 +416,7 @@ export const templateTheme = `/*
 }
 
 /* 表头 */
-#wemd table tr th {
+#mp table tr th {
     background: #f5f5f5;
     /* 背景色 */
     color: #333;
@@ -430,14 +430,14 @@ export const templateTheme = `/*
 }
 
 /* 表格单元格 */
-#wemd table tr td {
+#mp table tr td {
     border: 1px solid #ddd;
     padding: 10px;
     color: #333;
 }
 
 /* 斑马纹（隔行变色） */
-#wemd table tr:nth-child(even) td {
+#mp table tr:nth-child(even) td {
     background-color: #fafafa;
 }
 
@@ -445,7 +445,7 @@ export const templateTheme = `/*
  * 12. 分割线样式
  * ============================================
  */
-#wemd hr {
+#mp hr {
     margin: 30px 0;
     /* 外边距 */
     border: none;
@@ -459,27 +459,27 @@ export const templateTheme = `/*
  * 13. 脚注样式
  * ============================================
  */
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
     color: #1e6bb8;
     /* 脚注链接颜色 */
     font-weight: bold;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
     border-top: 1px solid #ddd;
     /* 分隔线 */
     padding-top: 20px;
     margin-top: 40px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
     font-weight: bold;
     color: #1e6bb8;
     margin-right: 4px;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
     color: #666;
     font-size: 14px;
     margin: 4px 0;
@@ -490,24 +490,24 @@ export const templateTheme = `/*
  * ============================================
  */
 /* 行间公式 */
-#wemd .block-equation {
+#mp .block-equation {
     display: block;
     text-align: center;
     margin: 20px 0;
     overflow-x: auto;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
     max-width: 100% !important;
     /* 最大宽度：不超出容器 */
 }
 
 /* 行内公式 */
-#wemd .inline-equation {
+#mp .inline-equation {
     display: inline;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
     max-width: 100%;
     vertical-align: middle;
     /* 垂直居中 */
@@ -522,7 +522,7 @@ export const templateTheme = `/*
  */
 
 /* 提示块基础样式 */
-#wemd .callout {
+#mp .callout {
     margin: 20px 0;
     padding: 16px 20px;
     background: #f5f5f5;
@@ -530,39 +530,39 @@ export const templateTheme = `/*
     border-radius: 4px;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
     font-weight: bold;
     margin-bottom: 8px;
     color: #333;
     font-size: 15px;
 }
 
-#wemd .callout-icon { margin-right: 8px;
+#mp .callout-icon { margin-right: 8px;
     margin-right: 6px;
 }
 
 /* 不同类型的提示块 */
-#wemd .callout-note { 
+#mp .callout-note { 
     border-left-color: #6366f1; 
     background: #f5f5ff; 
 }
 
-#wemd .callout-tip { 
+#mp .callout-tip { 
     border-left-color: #10b981; 
     background: #ecfdf5; 
 }
 
-#wemd .callout-important { 
+#mp .callout-important { 
     border-left-color: #8b5cf6; 
     background: #f5f3ff; 
 }
 
-#wemd .callout-warning { 
+#mp .callout-warning { 
     border-left-color: #f59e0b; 
     background: #fffbeb; 
 }
 
-#wemd .callout-caution { 
+#mp .callout-caution { 
     border-left-color: #ef4444; 
     background: #fff5f5; 
 }
@@ -572,22 +572,22 @@ export const templateTheme = `/*
  * ============================================
  */
 /* 定义列表 */
-#wemd dl {
+#mp dl {
     margin: 15px 0;
 }
 
-#wemd dt {
+#mp dt {
     font-weight: bold;
     margin-top: 10px;
 }
 
-#wemd dd {
+#mp dd {
     margin-left: 20px;
     color: #666;
 }
 
 /* 目录（TOC） */
-#wemd .table-of-contents {
+#mp .table-of-contents {
     margin: 20px 0;
     padding: 15px;
     background: #f5f5f5;
@@ -595,7 +595,7 @@ export const templateTheme = `/*
     border-radius: 4px;
 }
 
-#wemd .table-of-contents a {
+#mp .table-of-contents a {
     color: #333;
     text-decoration: none;
 }
@@ -607,7 +607,7 @@ export const templateTheme = `/*
  * 17. 图片轮播样式 (Imageflow)
  * ============================================
  */
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   /* white-space: normal; */
@@ -616,13 +616,13 @@ export const templateTheme = `/*
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -632,7 +632,7 @@ export const templateTheme = `/*
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -641,7 +641,7 @@ export const templateTheme = `/*
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;

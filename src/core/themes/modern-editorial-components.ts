@@ -1,5 +1,5 @@
 export const modernEditorialComponentsTheme = `/* 代码块 */
-#wemd pre {
+#mp pre {
   margin: 32px 0;
   border-top: 5px solid #c76237;
   border-radius: 1px;
@@ -8,13 +8,13 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd pre.custom {
+#mp pre.custom {
   overflow: hidden;
   overflow-x: auto;
 }
 
-#wemd pre code,
-#wemd pre code.hljs {
+#mp pre code,
+#mp pre code.hljs {
   display: block;
   min-width: max-content;
   padding: 20px 21px;
@@ -27,50 +27,50 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   white-space: pre;
 }
 
-#wemd pre.custom > .mac-sign {
+#mp pre.custom > .mac-sign {
   display: block;
   border-bottom: 1px solid #3d4037;
   background: #23251f;
 }
 
-#wemd pre code.hljs .hljs-comment,
-#wemd pre code.hljs .hljs-quote {
+#mp pre code.hljs .hljs-comment,
+#mp pre code.hljs .hljs-quote {
   color: #999c90;
 }
 
-#wemd pre code.hljs .hljs-keyword,
-#wemd pre code.hljs .hljs-selector-tag,
-#wemd pre code.hljs .hljs-meta {
+#mp pre code.hljs .hljs-keyword,
+#mp pre code.hljs .hljs-selector-tag,
+#mp pre code.hljs .hljs-meta {
   color: #f09a6d;
 }
 
-#wemd pre code.hljs .hljs-string,
-#wemd pre code.hljs .hljs-doctag,
-#wemd pre code.hljs .hljs-regexp {
+#mp pre code.hljs .hljs-string,
+#mp pre code.hljs .hljs-doctag,
+#mp pre code.hljs .hljs-regexp {
   color: #afc89f;
 }
 
-#wemd pre code.hljs .hljs-number,
-#wemd pre code.hljs .hljs-literal,
-#wemd pre code.hljs .hljs-symbol {
+#mp pre code.hljs .hljs-number,
+#mp pre code.hljs .hljs-literal,
+#mp pre code.hljs .hljs-symbol {
   color: #dfbe76;
 }
 
-#wemd pre code.hljs .hljs-title,
-#wemd pre code.hljs .hljs-section,
-#wemd pre code.hljs .hljs-type {
+#mp pre code.hljs .hljs-title,
+#mp pre code.hljs .hljs-section,
+#mp pre code.hljs .hljs-type {
   color: #91bec8;
 }
 
 /* 数据表 */
-#wemd .table-container {
+#mp .table-container {
   margin: 34px 0;
   border-top: 5px solid #c76237;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd table {
+#mp table {
   width: 100%;
   border-collapse: collapse;
   color: #34362f;
@@ -78,13 +78,13 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   text-align: left;
 }
 
-#wemd table tr {
+#mp table tr {
   border: none;
   background: transparent;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   min-width: 88px;
   padding: 12px 11px;
   border: none;
@@ -96,19 +96,19 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   text-align: left;
 }
 
-#wemd table tr th {
+#mp table tr th {
   color: #f2f0e7;
   background: #34372f;
   font-weight: 700;
   letter-spacing: 0.035em;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background: #ecebe3;
 }
 
 /* 编辑部提示 */
-#wemd .callout {
+#mp .callout {
   margin: 32px 0;
   padding: 19px 21px;
   border: 1px solid #cecec3;
@@ -119,7 +119,7 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   box-shadow: none;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   display: flex;
   align-items: center;
   margin-bottom: 9px;
@@ -129,38 +129,38 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   letter-spacing: 0.055em;
 }
 
-#wemd .callout-icon {
+#mp .callout-icon {
   margin-right: 8px;
   font-size: 15px;
 }
 
-#wemd .callout p {
+#mp .callout p {
   margin: 0;
   color: #505348;
   font-size: 15px;
   line-height: 1.8;
 }
 
-#wemd .callout-warning,
-#wemd .callout-caution {
+#mp .callout-warning,
+#mp .callout-caution {
   border-left-color: #c76237;
   background: #f5ebe4;
 }
 
 /* 参考资料 */
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
   color: #9f4828;
   font-weight: 600;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
   margin-top: 52px;
   padding-top: 20px;
   border-top: 5px solid #34372f;
 }
 
-#wemd .footnotes-sep:before {
+#mp .footnotes-sep:before {
   display: block;
   content: "参考资料";
   color: #34372f;
@@ -170,12 +170,12 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   letter-spacing: 0.045em;
 }
 
-#wemd .footnote-item {
+#mp .footnote-item {
   display: flex;
   margin-top: 10px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   width: 31px;
   flex-shrink: 0;
   color: #c76237;
@@ -183,7 +183,7 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   line-height: 1.75;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   width: auto;
   margin: 0;
   color: #74776d;
@@ -193,7 +193,7 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
 }
 
 /* 公式、图表和任务列表 */
-#wemd .block-equation {
+#mp .block-equation {
   display: block;
   margin: 34px 0;
   padding: 20px 10px;
@@ -204,26 +204,26 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   max-width: 300% !important;
 }
 
-#wemd .inline-equation {
+#mp .inline-equation {
   display: inline;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
   vertical-align: middle;
 }
 
-#wemd pre.mermaid {
+#mp pre.mermaid {
   padding: 22px 12px;
   border: 1px solid #cecec3;
   border-top: 5px solid #626754;
   background: #f7f6f0;
 }
 
-#wemd .task-list-item {
+#mp .task-list-item {
   display: flex;
   align-items: flex-start;
   gap: 0;
@@ -231,7 +231,7 @@ export const modernEditorialComponentsTheme = `/* 代码块 */
   list-style: none;
 }
 
-#wemd .task-list-item input[type='checkbox'] {
+#mp .task-list-item input[type='checkbox'] {
   margin-top: 7px;
   margin-right: 8px;
   pointer-events: none;

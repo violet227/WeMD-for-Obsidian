@@ -1,7 +1,7 @@
 import juice from "juice";
 
-const DATA_TOOL = "WeMD编辑器";
-const SECTION_ID = "wemd";
+const DATA_TOOL = "公众号排版";
+const SECTION_ID = "mp";
 
 const BLOCK_TAGS = [
   "p",

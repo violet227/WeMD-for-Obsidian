@@ -17,5 +17,6 @@ export * from "./modern-editorial";
 export * from "./neo-brutalism";
 export * from "./receipt";
 export * from "./sunset-film";
+export * from "./swiss-international";
 export * from "./template";
 export * from "./whitespace-gallery";

@@ -2,8 +2,8 @@ import MarkdownIt from "markdown-it";
 import StateCore from "markdown-it/lib/rules_core/state_core";
 import Token from "markdown-it/lib/token";
 
-const SOURCE_START_ATTRIBUTE = "data-wemd-source-start";
-const SOURCE_END_ATTRIBUTE = "data-wemd-source-end";
+const SOURCE_START_ATTRIBUTE = "data-mp-source-start";
+const SOURCE_END_ATTRIBUTE = "data-mp-source-end";
 const STANDALONE_RENDERERS = ["fence", "math_block"] as const;
 
 const hasSourceMap = (
@@ -37,7 +37,7 @@ const injectTokenAttributes = (html: string, token: Token): string => {
 };
 
 export default (md: MarkdownIt): void => {
-  md.core.ruler.push("wemd_source_position", (state: StateCore) => {
+  md.core.ruler.push("mp_source_position", (state: StateCore) => {
     state.tokens.forEach(addSourceAttributes);
   });
 

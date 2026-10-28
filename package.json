@@ -1,8 +1,8 @@
 {
-  "name": "wemd-for-obsidian",
+  "name": "obsidian-mp-formatter",
   "version": "0.1.0",
   "private": true,
-  "description": "WeMD WeChat formatter for Obsidian",
+  "description": "WeChat Official Account formatter for Obsidian",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",

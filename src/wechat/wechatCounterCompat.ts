@@ -432,11 +432,11 @@ export const materializeCounterPseudoContent = (
   host.style.top = "-9999px";
   host.style.pointerEvents = "none";
   host.style.opacity = "0";
-  host.innerHTML = `<style>${css}</style><section id="wemd">${html}</section>`;
+  host.innerHTML = `<style>${css}</style><section id="mp">${html}</section>`;
   document.body.appendChild(host);
 
   try {
-    const root = host.querySelector("#wemd");
+    const root = host.querySelector("#mp");
     if (!root) return html;
 
     const counterScopes: CounterScopes = new Map();
@@ -455,7 +455,7 @@ export const materializeCounterPseudoContent = (
       if (!text) return;
 
       const span = document.createElement("span");
-      span.setAttribute("data-wemd-counter-generated", pseudo);
+      span.setAttribute("data-mp-counter-generated", pseudo);
       span.textContent = text;
       copyPseudoStyles(pseudoStyle, span);
 

@@ -1,6 +1,6 @@
 /**
  * 纯文本级别的 CSS 变量展开
- * 将 CSS 中的 var(--wemd-*) 引用替换为具体值，消除对运行时 DOM 的依赖
+ * 将 CSS 中的 var(--mp-*) 引用替换为具体值，消除对运行时 DOM 的依赖
  */
 import {
   findNextVarStart,

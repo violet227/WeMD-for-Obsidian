@@ -1,7 +1,7 @@
 export const basicTheme = `/* 默认样式，最佳实践 */
 
 /* 全局属性 */
-#wemd {
+#mp {
   font-size: 16px;
   color: #000000;
   padding: 0 8px;
@@ -15,7 +15,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 段落 */
-#wemd p {
+#mp p {
   font-size: 16px;
   margin: 0;
   line-height: 26px;
@@ -23,75 +23,75 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 标题 */
-#wemd h1,
-#wemd h2,
-#wemd h3,
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h1,
+#mp h2,
+#mp h3,
+#mp h4,
+#mp h5,
+#mp h6 {
   margin-top: 30px;
   margin-bottom: 15px;
   padding: 0px;
   font-weight: bold;
   color: #000000;
 }
-#wemd h1 {
+#mp h1 {
   font-size: 24px;
 }
-#wemd h2 {
+#mp h2 {
   font-size: 22px;
 }
-#wemd h3 {
+#mp h3 {
   font-size: 20px;
 }
-#wemd h4 {
+#mp h4 {
   font-size: 18px;
 }
-#wemd h5 {
+#mp h5 {
   font-size: 16px;
 }
-#wemd h6 {
+#mp h6 {
   font-size: 16px;
 }
 
-#wemd h1 .prefix,
-#wemd h2 .prefix,
-#wemd h3 .prefix,
-#wemd h4 .prefix,
-#wemd h5 .prefix,
-#wemd h6 .prefix {
+#mp h1 .prefix,
+#mp h2 .prefix,
+#mp h3 .prefix,
+#mp h4 .prefix,
+#mp h5 .prefix,
+#mp h6 .prefix {
   display: none;
 }
 
-#wemd h1 .suffix,
-#wemd h2 .suffix,
-#wemd h3 .suffix,
-#wemd h4 .suffix,
-#wemd h5 .suffix,
-#wemd h6 .suffix {
+#mp h1 .suffix,
+#mp h2 .suffix,
+#mp h3 .suffix,
+#mp h4 .suffix,
+#mp h5 .suffix,
+#mp h6 .suffix {
   display: none;
 }
 
 /* 列表 */
-#wemd ul,
-#wemd ol {
+#mp ul,
+#mp ol {
   margin-top: 8px;
   margin-bottom: 8px;
   padding-left: 25px;
   color: #000000;
 }
-#wemd ul {
+#mp ul {
   list-style-type: disc;
 }
-#wemd ul ul {
+#mp ul ul {
   list-style-type: square;
 }
 
-#wemd ol {
+#mp ol {
   list-style-type: decimal;
 }
 
-#wemd li section {
+#mp li section {
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 26px;
@@ -101,11 +101,11 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 引用 */
-#wemd blockquote {
+#mp blockquote {
   border: none;
 }
 
-#wemd .multiquote-1 {
+#mp .multiquote-1 {
   display: block;
   font-size: 0.9em;
   overflow: auto;
@@ -121,42 +121,42 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   margin-top: 20px;
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
   margin: 0px;
   color: #000000;
   line-height: 26px;
 }
 
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
   box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
   padding: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
   box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
   padding: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
   text-align: center;
 }
 
-#wemd .multiquote-3 h3 {
+#mp .multiquote-3 h3 {
   text-align: center;
 }
 
-#wemd .table-of-contents a {
+#mp .table-of-contents a {
   border: none;
   color: #000000;
   font-weight: normal;
 }
 
 /* 链接 */
-#wemd a {
+#mp a {
   text-decoration: none;
   color: #1e6bb8;
   word-wrap: break-word;
@@ -165,38 +165,38 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 加粗 */
-#wemd strong {
+#mp strong {
   font-weight: bold;
   color: #000000;
 }
 
 /* 斜体 */
-#wemd em {
+#mp em {
   font-style: italic;
   color: #000000;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
   font-weight: bold;
   color: #000000;
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
   font-style: italic;
   color: #000000;
 }
 
 /* 下划线 */
-#wemd u {
+#mp u {
   text-decoration: underline;
   text-underline-offset: 0.18em;
   text-decoration-thickness: 1px;
 }
 
 /* 分隔线 */
-#wemd hr {
+#mp hr {
   height: 1px;
   margin: 0;
   margin-top: 10px;
@@ -206,21 +206,21 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 代码块容器 */
-#wemd pre {
+#mp pre {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd pre.custom {
+#mp pre.custom {
   padding: 0;
   border-radius: 6px;
   overflow: hidden;
   overflow-x: auto;
 }
 
-#wemd pre code {
+#mp pre code {
   display: block;
   font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
   border-radius: 0px;
@@ -230,15 +230,15 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd pre code span {
+#mp pre code span {
   line-height: 26px;
 }
 
 /* 行内代码 */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
   font-size: 14px;
   word-wrap: break-word;
   padding: 2px 4px;
@@ -251,83 +251,83 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 图片 */
-#wemd img {
+#mp img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
 /* 图片 */
-#wemd figure {
+#mp figure {
   margin: 0;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
 /* 图片描述文字：全局不显示图注，避免图片下方出现注释/占位空白 */
-#wemd figcaption {
+#mp figcaption {
   display: none;
 }
 
 
 /* 表格容器 */
-#wemd .table-container{
+#mp .table-container{
   overflow-x: auto;
 }
 
 /* 表格 */
-#wemd table {
+#mp table {
   display: table;
   text-align: left;
 }
-#wemd tbody {
+#mp tbody {
   border: 0;
 }
 
-#wemd table tr {
+#mp table tr {
   border: 0;
   border-top: 1px solid #ccc;
   background-color: #ffffff;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background-color: #F8F8F8;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   font-size: 16px;
   border: 1px solid #ccc;
   padding: 5px 10px;
   text-align: left;
 }
 
-#wemd table tr th {
+#mp table tr th {
   font-weight: bold;
   background-color: #f0f0f0;
 }
 
 /* 表格最小列宽4个汉字 */
-#wemd table tr th:nth-of-type(n),
-#wemd table tr td:nth-of-type(n){
+#mp table tr th:nth-of-type(n),
+#mp table tr td:nth-of-type(n){
   min-width:85px;
 }
 
-#wemd .footnote-word {
+#mp .footnote-word {
   color: #1e6bb8;
   font-weight: bold;
 }
 
-#wemd .footnote-ref {
+#mp .footnote-ref {
   color: #1e6bb8;
   font-weight: bold;
 }
 
-#wemd .footnote-item {
+#mp .footnote-item {
   display: flex;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   display: inline;
   width: 10%; /*神奇，50px就不可以*/
   background: none;
@@ -337,7 +337,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   display: inline;
   font-size: 14px;
   width: 90%;
@@ -349,17 +349,17 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   width: calc(100%-50)
 }
 
-#wemd sub, sup {
+#mp sub, sup {
   line-height: 0;
 }
 
-#wemd .footnotes-sep:before {
+#mp .footnotes-sep:before {
   content: "参考资料";
   display: block;
 }
 
 /* 解决公式问题 */
-#wemd .block-equation {
+#mp .block-equation {
   display:block;
   text-align: center;
   overflow: auto;
@@ -367,18 +367,18 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   max-width: 300% !important;
   -webkit-overflow-scrolling: touch;
 }
 
-#wemd .inline-equation {
+#mp .inline-equation {
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
 }
 
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   white-space: normal;
@@ -387,13 +387,13 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -403,7 +403,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -412,26 +412,26 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;
   color: #888;
 }
 
-#wemd .nice-suffix-juejin-container {
+#mp .nice-suffix-juejin-container {
   margin-top: 20px !important;
 }
 
-#wemd figure a {
+#mp figure a {
   border: none;
 }
 
-#wemd figure a img {
+#mp figure a img {
   margin: 0px;
 }
 
-#wemd figure {
+#mp figure {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -439,14 +439,14 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 }
 
 /* 图片链接嵌套 */
-#wemd figure a {
+#mp figure a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* 图片链接嵌套，图片解释 */
-#wemd figure a + figcaption {
+#mp figure a + figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,7 +458,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   z-index: 20;
 }
 
-#wemd .callout {
+#mp .callout {
   margin: 24px 0;
   padding: 18px 20px;
   border-radius: 16px;
@@ -467,7 +467,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   font-weight: 600;
   margin-bottom: 8px;
   display: flex;
@@ -476,18 +476,18 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   letter-spacing: 0.05em;
 }
 
-#wemd .callout-icon { margin-right: 8px;
+#mp .callout-icon { margin-right: 8px;
   font-size: 18px;
 }
 
-#wemd .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
-#wemd .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
-#wemd .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
-#wemd .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
-#wemd .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
+#mp .callout-note { border-left: 4px solid #6366f1; background: #f5f5ff; }
+#mp .callout-tip { border-left: 4px solid #10b981; background: #ecfdf5; }
+#mp .callout-important { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+#mp .callout-warning { border-left: 4px solid #f59e0b; background: #fffbeb; }
+#mp .callout-caution { border-left: 4px solid #ef4444; background: #fff5f5; }
 
 
-#wemd .task-list-item {
+#mp .task-list-item {
   list-style: none;
   margin-left: -1.2em;
   margin-bottom: 6px;
@@ -496,7 +496,7 @@ export const basicTheme = `/* 默认样式，最佳实践 */
   align-items: flex-start;
 }
 
-#wemd .task-list-item input[type='checkbox'] {
+#mp .task-list-item input[type='checkbox'] {
   margin-top: 4px;
   pointer-events: none;
 }

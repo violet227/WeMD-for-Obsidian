@@ -1,7 +1,6 @@
 /**
  * 微信公众号复制编排
- * 改写自 WeMD apps/web/src/services/wechatCopyService.ts：去掉 MathJax 兜底与 Electron 桥，
- * 其余流水线（变量展开 → counter 物化 → 内联 → mermaid/表格 → 规范化）保持一致。
+ * 流水线：变量展开 → counter 物化 → 内联 → mermaid/表格 → 规范化 → 写剪贴板。
  */
 import { Notice } from "obsidian";
 import katexCss from "katex/dist/katex.min.css";
@@ -22,6 +21,8 @@ import { renderTableBlocks } from "./wechat/wechatTableRenderer";
 
 export interface WechatRenderOptions {
   showMacBar: boolean;
+  /** Mac 风格代码栏圆点图片的外链地址；为空时复制不带圆点 */
+  macDotsImageUrl: string;
   linkToFootnote: boolean;
   tableWrap: boolean;
   /** 在 HTML 写入容器后、后处理前替换本地图片地址 */
@@ -35,11 +36,15 @@ const katexCopyCss = katexCss.replace(/@font-face\{[^}]*\}/g, "");
 const buildCopyCss = (themeCss: string) =>
   `${expandCSSVariables(themeCss)}\n${katexCopyCss}`;
 
-// 微信不转存小尺寸 data: URI（WeMD #91），mac 圆点沿用 WeMD 托管的外链图片
-const MAC_SIGN_IMAGE_URL = "https://img.wemd.app/1785143461387_dwk0yi.svg";
-
-const renderMacSignDotsToImages = (container: HTMLElement): void => {
+// Mac 风格代码栏的三个圆点：公众号保存草稿时会丢弃 45×13 这类小尺寸 data: URI，
+// 也会过滤圆点 span 的样式，所以复制时换成用户在设置里填写的外链 SVG。
+// 没有填写地址时去掉圆点，只保留代码栏的留白。
+const renderMacSignDotsToImages = (container: HTMLElement, imageUrl: string): void => {
   container.querySelectorAll<HTMLElement>(".mac-sign").forEach((macSign) => {
+    if (!imageUrl) {
+      macSign.replaceChildren();
+      return;
+    }
     const dots = Array.from(macSign.querySelectorAll<HTMLElement>(".mac-dot"));
     if (dots.length === 0) return;
 
@@ -59,7 +64,7 @@ const renderMacSignDotsToImages = (container: HTMLElement): void => {
     if (!width || !height) return;
 
     const image = document.createElement("img");
-    image.src = MAC_SIGN_IMAGE_URL;
+    image.src = imageUrl;
     image.alt = "";
     image.width = width;
     image.height = height;
@@ -174,7 +179,7 @@ const copyViaElectronClipboard = (container: HTMLElement): boolean => {
     });
     return true;
   } catch (e) {
-    console.error("[WeMD] Electron 剪贴板写入失败:", e);
+    console.error("[mp] Electron 剪贴板写入失败:", e);
     return false;
   }
 };
@@ -189,7 +194,7 @@ export async function renderWechatContainer(
   options: WechatRenderOptions,
 ): Promise<{ container: HTMLDivElement; requiresExactHtmlTransport: boolean }> {
   const container = document.createElement("div");
-  container.addClass("wemd-copy-host");
+  container.addClass("mp-copy-host");
   container.style.position = "fixed";
   container.style.top = "0";
   container.style.left = "0";
@@ -229,7 +234,7 @@ export async function renderWechatContainer(
     await options.resolveImages?.(container);
     await renderMermaidBlocks(container);
     await renderTableBlocks(container, options.tableWrap);
-    renderMacSignDotsToImages(container);
+    renderMacSignDotsToImages(container, options.macDotsImageUrl.trim());
     const { requiresExactHtmlTransport } = normalizeCopyContainer(container);
     return { container, requiresExactHtmlTransport };
   } catch (error) {
@@ -258,7 +263,7 @@ export async function copyToWechat(
       copyViaNativeExecCommand(container, true) && clipboardHasHtml();
 
     if (!copied) {
-      console.warn("[WeMD] 选区复制未写入 HTML，改用 Electron 剪贴板");
+      console.warn("[mp] 选区复制未写入 HTML，改用 Electron 剪贴板");
       copied = copyViaElectronClipboard(container);
     }
 
@@ -277,7 +282,7 @@ export async function copyToWechat(
     if (!copied) throw new Error("剪贴板写入失败");
     new Notice("已复制", 2000);
   } catch (error) {
-    console.error("[WeMD] 复制失败:", error);
+    console.error("[mp] 复制失败:", error);
     new Notice(`复制失败: ${error instanceof Error ? error.message : error}`);
   } finally {
     container?.remove();
@@ -300,7 +305,7 @@ export async function copyHtmlSource(
     else await navigator.clipboard.writeText(html);
     new Notice("已复制 HTML", 2000);
   } catch (error) {
-    console.error("[WeMD] 复制 HTML 失败:", error);
+    console.error("[mp] 复制 HTML 失败:", error);
     new Notice(`复制 HTML 失败: ${error instanceof Error ? error.message : error}`);
   } finally {
     container?.remove();

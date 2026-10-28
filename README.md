@@ -1,11 +1,11 @@
 <div align="center">
 
-# WeMD for Obsidian
+# 公众号排版 · Obsidian 插件
 
 **在 Obsidian 里写，一键粘贴到微信公众号**
 
 把公众号排版能力带进 Obsidian：<br>
-边写边看手机端效果，12 套精选主题随手切换，也可以用 CSS 定制自己的主题。
+边写边看手机端效果，45 套主题随手切换，也可以用 CSS 定制自己的主题。
 
 [功能](#-功能) · [安装](#-安装) · [快速上手](#-快速上手) · [主题](#-主题) · [自定义主题](#-自定义主题) · [常见问题](#-常见问题)
 
@@ -19,7 +19,7 @@
 </div>
 
 <!-- 截图：把预览面板的截图放到 docs/preview.png 后取消下一行注释 -->
-<!-- <p align="center"><img src="docs/preview.png" width="860" alt="WeMD for Obsidian 预览"></p> -->
+<!-- <p align="center"><img src="docs/preview.png" width="860" alt="公众号排版预览"></p> -->
 
 ---
 
@@ -27,7 +27,7 @@
 
 - **实时预览**：右侧面板按手机阅读宽度显示公众号效果，跟随当前笔记，边编辑边刷新，编辑器滚动时预览同步滚动。
 - **一键复制到公众号**：样式全部内联，在公众号后台编辑器直接 `Ctrl+V` 粘贴即可，不需要再调格式。
-- **12 套内置主题**：来自 WeMD，涵盖简约、学术、杂志、复古等风格，可全局设置，也可按笔记单独指定。
+- **45 套内置主题**：按精选风格、日常写作、个性撞色、文艺叙事、深色沉浸五个分组排列，可全局设置，也可按笔记单独指定。
 - **自定义主题**：库里的一个 `.css` 文件就是一个主题，保存即生效；可以从任意内置主题复制一份开始改。
 - **兼容 Obsidian 写法**：`![[图片]]`、双链、callout、`%%注释%%`、frontmatter 都能正确处理，本地图片复制时自动内嵌。
 - **公式与图表**：支持 KaTeX 公式；Mermaid 图在复制时自动转成图片，公众号里也能正常显示。
@@ -39,8 +39,8 @@
 ### 方式一：手动安装
 
 1. 在 [Releases](../../releases) 页面下载最新版本的 `main.js`、`manifest.json`、`styles.css`。
-2. 在你的库里新建文件夹 `<你的库>/.obsidian/plugins/wemd/`，把这三个文件放进去。
-3. 打开 Obsidian「设置 → 第三方插件」，关闭安全模式，刷新「已安装插件」列表，启用 **WeMD for Obsidian**。
+2. 在你的库里新建文件夹 `<你的库>/.obsidian/plugins/mp-formatter/`，把这三个文件放进去。
+3. 打开 Obsidian「设置 → 第三方插件」，关闭安全模式，刷新「已安装插件」列表，启用 **公众号排版**。
 
 ### 方式二：BRAT
 
@@ -49,8 +49,8 @@
 ### 方式三：从源码构建
 
 ```bash
-git clone https://github.com/violet227/WeMD-for-Obsidian.git
-cd WeMD-for-Obsidian
+git clone https://github.com/violet227/Wetype-for-Obsidian.git
+cd Wetype-for-Obsidian
 npm install
 npm run build        # 生成 main.js
 ```
@@ -75,6 +75,10 @@ npm run build        # 生成 main.js
 
 ## 🎨 主题
 
+共 45 套内置主题，在预览下拉框中按分组显示。下表的 id 用于在笔记 frontmatter 中指定主题。
+
+**精选风格（13 套）**
+
 | 主题 | id | 主题 | id |
 | --- | --- | --- | --- |
 | 默认主题 | `default` | 知识库 | `knowledge-base` |
@@ -83,38 +87,78 @@ npm run build        # 生成 main.js
 | 清晰指南 | `clear-guide` | 编辑部手记 | `modern-editorial` |
 | 留白画册 | `whitespace-gallery` | 购物小票 | `receipt` |
 | 学术论文 | `academic-paper` | 落日胶片 | `sunset-film` |
+| 瑞士国际主义 | `swiss-international` | | |
+
+**日常写作（8 套）**：干净通用，适合大多数文章
+
+| 主题 | id | 主题 | id |
+| --- | --- | --- | --- |
+| 极简白 | `minimal-white` | 锤子便签 | `smartisan-note` |
+| 微信绿 | `wechat-green` | 荧光笔记 | `highlight` |
+| GitHub | `github` | 卡片信息流 | `card-flow` |
+| Medium | `medium` | 财经蓝 | `finance-blue` |
+
+**个性撞色（11 套）**：强对比彩色，视觉冲击强
+
+| 主题 | id | 主题 | id |
+| --- | --- | --- | --- |
+| 经典蓝 | `classic-blue` | 小红书种草 | `xiaohongshu` |
+| Bauhaus | `bauhaus` | 带货红 | `ecom-red` |
+| 暖橙 | `warm-orange` | 手账拼贴 | `handlog` |
+| 秋日暖光 | `autumn-glow` | 全息镭射 | `holographic` |
+| 嫩青小清新 | `cyan-pastel` | 孟菲斯波普 | `memphis` |
+| 蔷薇紫 | `rose-purple` | | |
+
+**文艺叙事（8 套）**：衬线阅读，书卷气
+
+| 主题 | id | 主题 | id |
+| --- | --- | --- | --- |
+| Claude 燕麦 | `claude-oat` | 新中式 | `neo-chinese` |
+| 新闻纸 | `nyt-paper` | 莫兰迪灰 | `morandi` |
+| 羊皮纸 | `retro-parchment` | 故宫红金 | `forbidden-city` |
+| 水墨 | `ink-wash` | 杂志编辑 | `magazine` |
+
+**深色沉浸（5 套）**：深色底，适合夜间与技术类文章
+
+| 主题 | id | 主题 | id |
+| --- | --- | --- | --- |
+| 极夜黑 | `dark-night` | 科技终端 | `terminal` |
+| Linear | `linear-dark` | 赛博霓虹 | `cyber-neon` |
+| 极简黑 | `minimal-black` | | |
+
+带底色的主题（如羊皮纸、Claude 燕麦和深色沉浸系列）复制时会连同底色一起复制到公众号。首字下沉、渐变文字、阴影这类公众号不支持的效果，主题里不使用。
 
 **全局默认主题**在插件设置里选择。某篇笔记想用别的主题，在 frontmatter 里加一行：
 
 ```yaml
 ---
-wemd-theme: receipt
+mp-theme: receipt
 ---
 ```
 
-值可以是主题 id、中文名称，或自定义主题的文件名。笔记里已有 `wemd-theme` 时，在预览下拉框切换主题会直接改写这一项；没有的话，切换的是全局默认主题。
+值可以是主题 id、中文名称，或自定义主题的文件名。笔记里已有 `mp-theme` 时，在预览下拉框切换主题会直接改写这一项；没有的话，切换的是全局默认主题。
 
 ## 🖌 自定义主题
 
 **从内置主题开始改（推荐）**
 
-1. 打开「设置 → WeMD for Obsidian → 新建自定义主题」，选一个内置主题作为起点，输入名称。
-2. 插件会在库里的 `wemd-themes/` 文件夹生成对应的 `.css` 文件并打开。
+1. 打开「设置 → 公众号排版 → 新建自定义主题」，选一个内置主题作为起点，输入名称。
+2. 插件会在库里的 `mp-themes/` 文件夹生成对应的 `.css` 文件并打开。
 3. 修改并保存，预览马上更新。
 
 **直接放 CSS 文件**
 
-`wemd-themes/` 下的每个 `.css` 文件都会被识别为一个主题。示例：
+`mp-themes/` 下的每个 `.css` 文件都会被识别为一个主题。示例：
 
 ```css
 /* name: 我的蓝色主题 */
 
-#wemd h2 {
+#mp h2 {
   color: #1e6fd9;
   border-bottom: 2px solid #1e6fd9;
 }
 
-#wemd blockquote {
+#mp blockquote {
   border-left: 4px solid #1e6fd9;
   background: #f3f8ff;
 }
@@ -122,9 +166,9 @@ wemd-theme: receipt
 
 几点规则：
 
-- 所有选择器都要以 `#wemd` 开头，排版内容都在 `<section id="wemd">` 里。
+- 所有选择器都要以 `#mp` 开头，排版内容都在 `<section id="mp">` 里。早期版本写的选择器仍然可用，加载时会自动换成 `#mp`。
 - 首行的 `/* name: xxx */` 决定显示名称，不写就用文件名。
-- 默认会在你的 CSS 前面拼上 WeMD 基础样式，所以只需写想改的部分；不需要的话可以在设置里关掉「拼接 WeMD 基础样式」。
+- 默认会在你的 CSS 前面拼上基础样式，所以只需写想改的部分；不需要的话可以在设置里关掉「拼接基础样式」。
 - 公众号会过滤部分 CSS（如 `position`、动画、外部字体），写主题时尽量用颜色、边框、背景、间距这些基础属性。
 
 ## ⚙️ 设置项
@@ -133,11 +177,12 @@ wemd-theme: receipt
 | --- | --- |
 | 默认主题 | 没有在 frontmatter 指定主题的笔记使用这个主题 |
 | 代码块 Mac 风格标题栏 | 代码块顶部显示红黄绿三个圆点 |
+| Mac 标题栏圆点图片地址 | 公众号会丢弃代码栏里的圆点，复制时需要换成一张外链图片（45×13 的 SVG/PNG）。填你图床上的地址；留空则复制到公众号时不显示圆点 |
 | 链接转脚注 | 公众号正文里的外链无法点击，开启后链接会列在文末 |
 | 表格单元格换行 | 关闭时宽表格横向滚动 |
 | 滚动同步 | 预览随编辑器按比例滚动 |
-| 主题文件夹 | 自定义主题所在的文件夹，默认 `wemd-themes` |
-| 拼接 WeMD 基础样式 | 自定义主题是否叠加在基础样式之上 |
+| 主题文件夹 | 自定义主题所在的文件夹，默认 `mp-themes` |
+| 拼接基础样式 | 自定义主题是否叠加在基础样式之上 |
 | 自定义主题代码高亮 | 自定义主题使用的代码配色：GitHub 亮色 / 暗色 |
 
 ## 📝 Obsidian 语法支持
@@ -175,7 +220,7 @@ npm run dev     # 监听源码变化并重新构建 main.js
 npm run build   # 类型检查 + 生产构建
 ```
 
-开发时可以把仓库目录直接软链接到某个测试库的 `.obsidian/plugins/wemd/`，配合 [Hot Reload](https://github.com/pjeby/hot-reload) 插件自动重载。
+开发时可以把仓库目录直接软链接到某个测试库的 `.obsidian/plugins/mp-formatter/`，配合 [Hot Reload](https://github.com/pjeby/hot-reload) 插件自动重载。
 
 目录结构：
 
@@ -187,18 +232,22 @@ src/
 ├── themes.ts            # 内置主题与自定义主题管理
 ├── settings.ts          # 设置页
 ├── obsidianMarkdown.ts  # Obsidian 语法转换、本地图片处理
-├── core/                # 来自 WeMD packages/core：解析器、markdown-it 插件、主题
-└── wechat/              # 来自 WeMD apps/web：公众号兼容处理
+├── legacy.ts            # 兼容早期版本的选择器、frontmatter 字段和设置
+├── core/                # 解析器、markdown-it 插件、精选风格主题
+├── wechat/              # 公众号兼容处理
+└── extra-themes/        # 元素样式表格式的主题数据；convert.ts 转成 #mp CSS
 ```
 
-`src/core/` 与 `src/wechat/` 基本保持 WeMD 原样，方便跟进上游更新。目前的本地改动：
+`src/core/`、`src/wechat/` 和 `src/extra-themes/themes/` 来自第三方开源项目，基本保持原样，方便跟进上游更新，来源与许可见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES)。目前的本地改动：
 
-- `wechat/wechatMermaidRenderer.ts`：主题配置改为参数传入，不再依赖 WeMD 的状态管理。
+- 统一改名：CSS 根选择器为 `#mp`，类名、数据属性等前缀为 `mp-`。
+- `wechat/wechatMermaidRenderer.ts`：主题配置改为参数传入，不依赖原项目的状态管理。
+- `wechat/wechatTableRenderer.ts`：主题用 `!important` 指定了单元格对齐方式时，复制时不再强制居中。
 - `core/themes/receipt.ts`：列表符号 `[*]` 挂到列表项内部，修复它单独占一行的问题。
+- `core/themes/morandi-forest.ts`、`luxury-gold.ts`：去掉渐变背景、调整间距和加粗样式。
+- `core/themes/swiss-international.ts`：新增的主题。
 
-## 🔍 与 WeMD 的区别
-
-本插件只移植了 WeMD 的排版与复制能力，以下功能暂未包含：
+## 🔍 暂不支持的功能
 
 - 可视化主题设计器（可用 CSS 自定义主题代替）
 - MathJax 公式兜底
@@ -206,7 +255,7 @@ src/
 
 ## 🙏 致谢
 
-排版核心、内置主题和公众号兼容处理来自 [WeMD](https://github.com/tenngoxars/WeMD)，感谢 WeMD 团队的开源工作。WeMD 使用 MIT 许可证，原许可证见 [LICENSE.wemd](LICENSE.wemd)。
+本插件的排版核心、部分主题和公众号兼容处理来自第三方 MIT 开源项目，感谢原作者的开源工作。项目地址与原始许可证见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES)。
 
 ## 📄 许可证
 

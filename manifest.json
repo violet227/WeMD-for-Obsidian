@@ -1,9 +1,9 @@
 {
-  "id": "wemd",
-  "name": "WeMD for Obsidian",
+  "id": "mp-formatter",
+  "name": "公众号排版",
   "version": "0.1.0",
   "minAppVersion": "1.4.0",
-  "description": "将 Markdown 笔记按 WeMD 主题排版，实时预览并一键复制到微信公众号。",
+  "description": "将 Markdown 笔记排版成微信公众号文章，45 套主题实时预览，一键复制到公众号后台。",
   "author": "Vito Wang",
   "isDesktopOnly": true
 }

@@ -189,12 +189,12 @@ const hasAutoHorizontalMargin = (node: HTMLElement): boolean => {
 
 // ── DOM 变换 ────────────────────────────────────────
 
-const transformWemdRootSectionToDiv = (container: HTMLElement): void => {
+const transformRootSectionToDiv = (container: HTMLElement): void => {
   const root = container.firstElementChild;
   if (
     !(root instanceof HTMLElement) ||
     root.tagName !== "SECTION" ||
-    root.id !== "wemd" ||
+    root.id !== "mp" ||
     container.childElementCount !== 1
   ) {
     return;
@@ -212,7 +212,7 @@ const transformWemdRootSectionToDiv = (container: HTMLElement): void => {
 
 export const stripCopyMetadata = (container: HTMLElement): void => {
   const root = container.firstElementChild;
-  if (root instanceof HTMLElement && root.id === "wemd") {
+  if (root instanceof HTMLElement && root.id === "mp") {
     root.removeAttribute("id");
   }
 
@@ -221,9 +221,9 @@ export const stripCopyMetadata = (container: HTMLElement): void => {
   });
 
   container
-    .querySelectorAll<HTMLElement>("[data-wemd-counter-generated]")
+    .querySelectorAll<HTMLElement>("[data-mp-counter-generated]")
     .forEach((node) => {
-      node.removeAttribute("data-wemd-counter-generated");
+      node.removeAttribute("data-mp-counter-generated");
     });
 };
 
@@ -573,7 +573,7 @@ export const normalizeCopyContainer = (
   const preserveRootBackgroundCanvas =
     prepareRootBackgroundCanvasForWechat(container);
   if (!preserveRootBackgroundCanvas) {
-    transformWemdRootSectionToDiv(container);
+    transformRootSectionToDiv(container);
   }
   stripCopyMetadata(container);
   const rootBgColor = preserveRootBackgroundCanvas

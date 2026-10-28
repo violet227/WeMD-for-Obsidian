@@ -190,7 +190,7 @@ const svgMarkupToPng = async (
       img.onload = () => resolve();
       img.onerror = () => {
         console.error(
-          "[WeMD] Mermaid SVG failed to load as Image. SVG head (500):\n",
+          "[mp] Mermaid SVG failed to load as Image. SVG head (500):\n",
           svgData.slice(0, 500),
         );
         reject(new Error("Mermaid SVG 无法作为 Image 加载"));
@@ -242,7 +242,7 @@ export const renderMermaidBlocks = async (
   const mermaidBlocks = Array.from(container.querySelectorAll("pre.mermaid"));
   if (mermaidBlocks.length === 0) return;
 
-  const renderIdBase = `wemd-mermaid-${Date.now()}`;
+  const renderIdBase = `mp-mermaid-${Date.now()}`;
 
   // 构建 Mermaid 配置并全局应用（关闭 htmlLabels 避免 foreignObject）
   const initConfig = getMermaidConfig(designerVariables, { htmlLabels: false });
@@ -268,7 +268,7 @@ export const renderMermaidBlocks = async (
         );
         svg = rendered.svg;
       } catch (error) {
-        console.error("[WeMD] Mermaid render failed:", error);
+        console.error("[mp] Mermaid render failed:", error);
         continue;
       }
 
@@ -289,7 +289,7 @@ export const renderMermaidBlocks = async (
       } catch (error) {
         // PNG 转换失败时降级为内联 SVG，至少比裸露源码强
         console.error(
-          "[WeMD] Mermaid SVG→PNG failed, fallback to inline SVG:",
+          "[mp] Mermaid SVG→PNG failed, fallback to inline SVG:",
           error,
         );
         figure.innerHTML = svg;

@@ -55,7 +55,7 @@ const CONSTANTS = {
   DEFAULT_DARK_BG_L_OFFSET: 10,
 };
 
-const CONVERSION_MARK = "/* wemd-wechat-dark-converted */";
+const CONVERSION_MARK = "/* mp-wechat-dark-converted */";
 const convertCssCache = new Map<string, string>();
 const convertCssCacheQueue: string[] = [];
 const CACHE_LIMIT = 200;

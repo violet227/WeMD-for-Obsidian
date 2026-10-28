@@ -377,9 +377,9 @@ export const resolveInlineStyleVariablesForCopy = (html: string): string => {
   const lightRootVars = applyLightRootVars(host);
   host.innerHTML = html;
 
-  // 临时移除 id="wemd"，阻断预览区暗色 <style> 通过 #wemd 选择器匹配到离屏容器
-  const wemdRoot = host.querySelector<HTMLElement>("#wemd");
-  if (wemdRoot) wemdRoot.removeAttribute("id");
+  // 临时移除 id="mp"，阻断预览区暗色 <style> 通过 #mp 选择器匹配到离屏容器
+  const articleRoot = host.querySelector<HTMLElement>("#mp");
+  if (articleRoot) articleRoot.removeAttribute("id");
 
   document.body.appendChild(host);
 
@@ -392,7 +392,7 @@ export const resolveInlineStyleVariablesForCopy = (html: string): string => {
     );
 
     // 恢复 id，后续 normalizeCopyContainer 需要它
-    if (wemdRoot) wemdRoot.setAttribute("id", "wemd");
+    if (articleRoot) articleRoot.setAttribute("id", "mp");
     return host.innerHTML;
   } finally {
     document.body.removeChild(host);

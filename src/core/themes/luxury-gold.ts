@@ -1,5 +1,5 @@
 export const luxuryGoldTheme = `/* 黑金奢华风格 */
-#wemd {
+#mp {
     padding: 5px 22px;
     max-width: 677px;
     margin: 0 auto;
@@ -12,7 +12,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 正文 - 疏朗的行间距 */
-#wemd p {
+#mp p {
     margin: 30px 0;
     line-height: 2.0;
     text-align: justify;
@@ -21,12 +21,12 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 一级标题 - 极简留白 */
-#wemd h1 {
+#mp h1 {
     margin: 70px 0 50px;
     text-align: center;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
     font-size: 26px;
     font-weight: normal;
     color: #000;
@@ -37,18 +37,18 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     padding-bottom: 20px;
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix {
     display: none;
 }
 
 /* 二级标题 - 金色边框盒子 */
-#wemd h2 {
+#mp h2 {
     margin: 50px 0 30px;
     text-align: center;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
     display: inline-block;
     font-size: 19px;
     font-weight: normal;
@@ -60,18 +60,18 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     letter-spacing: 1px;
 }
 
-#wemd h2 .prefix,
-#wemd h2 .suffix {
+#mp h2 .prefix,
+#mp h2 .suffix {
     display: none;
 }
 
 /* 三级标题 - 纯黑大写感 */
-#wemd h3 {
+#mp h3 {
     margin: 40px 0 20px;
     text-align: center;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
     font-size: 17px;
     font-weight: bold;
     color: #000;
@@ -79,18 +79,18 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     letter-spacing: 1px;
 }
 
-#wemd h3 .prefix,
-#wemd h3 .suffix {
+#mp h3 .prefix,
+#mp h3 .suffix {
     display: none;
 }
 
 /* 四级标题 - 金色小标 */
-#wemd h4 {
+#mp h4 {
     margin: 30px 0 15px;
     text-align: center;
 }
 
-#wemd h4 .content {
+#mp h4 .content {
     font-size: 16px;
     font-weight: normal;
     color: #9E8045;
@@ -98,15 +98,15 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     padding-bottom: 4px;
 }
 
-#wemd h4 .prefix,
-#wemd h4 .suffix {
+#mp h4 .prefix,
+#mp h4 .suffix {
     display: none;
 }
 
 /* 引用 - 居中衬线斜体 */
-#wemd .multiquote-1,
-#wemd .multiquote-2,
-#wemd .multiquote-3 {
+#mp .multiquote-1,
+#mp .multiquote-2,
+#mp .multiquote-3 {
     margin: 40px 0;
     padding: 20px 30px;
     background: #fff;
@@ -117,7 +117,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     /* 去掉默认左边框 */
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
     color: #666;
     font-style: italic;
     font-family: serif;
@@ -125,7 +125,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     line-height: 1.8;
 }
 
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
     margin: 38px 0;
     padding: 18px 28px;
     background: #fff;
@@ -134,14 +134,14 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     border-left: 2px solid #9E8045;
 }
 
-#wemd .multiquote-2 p {
+#mp .multiquote-2 p {
     color: #666;
     font-style: italic;
     font-family: serif;
     font-size: 15px;
 }
 
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
     margin: 36px 0;
     padding: 16px 26px;
     background: #fafafa;
@@ -150,7 +150,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     border-left: 1px solid #9E8045;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
     color: #666;
     font-style: italic;
     font-family: serif;
@@ -158,7 +158,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 列表 - 精致的金点 */
-#wemd ul {
+#mp ul {
     list-style: square;
     /* 方块比圆点更时尚 */
     padding-left: 20px;
@@ -166,70 +166,72 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     color: #9E8045;
 }
 
-#wemd ul li {
+#mp ul li {
     margin-bottom: 10px;
 }
 
-#wemd li section {
+#mp li section {
     color: #444;
 }
 
 /* 有序列表 */
-#wemd ol {
+#mp ol {
     list-style: decimal;
     padding-left: 20px;
     margin: 20px 0;
     color: #9E8045;
 }
 
-#wemd ul ul {
+#mp ul ul {
     list-style-type: circle;
     color: #9E8045;
     margin-top: 8px;
 }
 
-#wemd ol ol {
+#mp ol ol {
     list-style-type: lower-roman;
     color: #9E8045;
 }
 
-#wemd ol li {
+#mp ol li {
     margin-bottom: 10px;
 }
 
-#wemd ol li section {
+#mp ol li section {
     color: #444;
 }
 
 /* 链接 - 金色细线 */
-#wemd a {
+#mp a {
     color: #000;
     border-bottom: 1px solid #9E8045;
     text-decoration: none;
     transition: opacity 0.2s;
 }
 
-/* 加粗 - 金色高亮 */
-#wemd strong {
+/* 加粗 - 金色 + 金色下划线（链接是 1px 细线，加粗用 2px 区分） */
+#mp strong {
     color: #9E8045;
     font-weight: bold;
     margin: 0 2px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #9E8045;
 }
 
 /* 斜体 */
-#wemd em {
+#mp em {
     color: #9E8045;
     font-style: italic;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
     color: #9E8045;
     font-weight: bold;
 }
 
 /* 高亮 - 淡金背景 */
-#wemd mark {
+#mp mark {
     background: rgba(158, 128, 69, 0.15);
     color: #9E8045;
     padding: 2px 6px;
@@ -237,14 +239,14 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
     text-decoration: line-through;
     color: #999;
     text-decoration-color: #9E8045;
 }
 
 /* 分隔线 - 极简短线 */
-#wemd hr {
+#mp hr {
     margin: 60px auto;
     height: 1px;
     background: #9E8045;
@@ -253,7 +255,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 图片 - 纯净留白 */
-#wemd img {
+#mp img {
     display: block;
     margin: 10px auto;
     width: 100%;
@@ -261,7 +263,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
-#wemd figcaption {
+#mp figcaption {
     color: #999;
     font-size: 12px;
     margin-top: 15px;
@@ -274,10 +276,10 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
  * 行内代码 - 香槟金吊牌风格 (修复重点) 
  * 极淡的金色背景 + 细边框，精致感拉满
  */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
     color: #9E8045;
     /* 深金色文字 */
     background: rgba(158, 128, 69, 0.06);
@@ -294,7 +296,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 
 /* 代码块 - 极简黑白 */
 /* 代码块 - 注意：不要设置 color，让语法高亮主题控制文字颜色 */
-#wemd pre code.hljs {
+#mp pre code.hljs {
     display: block;
     padding: 20px;
     background: #fcfcfc;
@@ -311,14 +313,14 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 如果没有语法高亮，设置默认深灰色 */
-#wemd pre code:not(.hljs) {
+#mp pre code:not(.hljs) {
     color: #333;
     background: #fcfcfc;
     border: 1px solid #eee;
 }
 
 /* 表格 - 极简线条 */
-#wemd table {
+#mp table {
     width: 100%;
     border-collapse: collapse;
     margin: 16px 0;
@@ -327,7 +329,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     border-bottom: 1px solid #000;
 }
 
-#wemd table tr th {
+#mp table tr th {
     color: #9E8045;
     font-weight: normal;
     border-bottom: 1px solid #eee;
@@ -335,7 +337,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     text-align: center;
 }
 
-#wemd table tr td {
+#mp table tr td {
     border-bottom: 1px solid #eee;
     padding: 12px 10px;
     color: #555;
@@ -343,12 +345,12 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 }
 
 /* 脚注 */
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
     color: #9E8045;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
     border-top: 1px solid #eee;
     padding-top: 20px;
     margin-top: 60px;
@@ -357,30 +359,30 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     text-align: center;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
     font-weight: bold;
     color: #9E8045;
     margin-right: 4px;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
     color: #999;
     font-size: 12px;
     margin: 4px 0;
 }
 
 /* 公式 */
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
     max-width: 100% !important;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
     max-width: 100%;
     vertical-align: middle;
 }
 
 /* 提示块 - 黑金奢华风格 */
-#wemd .callout {
+#mp .callout {
     margin: 40px 0;
     padding: 20px 30px;
     background: #fff;
@@ -388,7 +390,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     border-radius: 2px;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
     font-weight: normal;
     margin-bottom: 10px;
     color: #9E8045;
@@ -397,18 +399,18 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
     font-size: 15px;
 }
 
-#wemd .callout-icon { margin-right: 8px;
+#mp .callout-icon { margin-right: 8px;
     margin-right: 6px;
 }
 
-#wemd .callout-note { border-left: 3px solid #9E8045; }
-#wemd .callout-tip { border-left: 3px solid #9E8045; }
-#wemd .callout-important { border-left: 3px solid #9E8045; }
-#wemd .callout-warning { border-left: 3px solid #D98C45; }
-#wemd .callout-caution { border-left: 3px solid #B33D25; }
+#mp .callout-note { border-left: 3px solid #9E8045; }
+#mp .callout-tip { border-left: 3px solid #9E8045; }
+#mp .callout-important { border-left: 3px solid #9E8045; }
+#mp .callout-warning { border-left: 3px solid #D98C45; }
+#mp .callout-caution { border-left: 3px solid #B33D25; }
 
 /* Imageflow CSS */
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   /* white-space: normal; */
@@ -417,13 +419,13 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -433,7 +435,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -442,7 +444,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;

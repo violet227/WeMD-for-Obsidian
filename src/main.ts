@@ -8,38 +8,44 @@ import {
   debounce,
 } from "obsidian";
 import katexCss from "katex/dist/katex.min.css";
-import { DEFAULT_SETTINGS, WemdSettingTab, type WemdSettings } from "./settings";
-import { ThemeManager, type WemdTheme } from "./themes";
-import { VIEW_TYPE_WEMD, WemdPreviewView } from "./view";
+import { DEFAULT_SETTINGS, MpSettingTab, type MpSettings } from "./settings";
+import { ThemeManager, type MpTheme } from "./themes";
+import {
+  LEGACY_FRONTMATTER_KEY,
+  LEGACY_VIEW_TYPE,
+  migrateThemeFolder,
+  migrateThemeId,
+} from "./legacy";
+import { VIEW_TYPE_MP, MpPreviewView } from "./view";
 import { preprocessObsidianMarkdown, resolveAssets } from "./obsidianMarkdown";
 import { copyHtmlSource, copyToWechat } from "./copy";
 
-const FRONTMATTER_THEME_KEY = "wemd-theme";
+const FRONTMATTER_THEME_KEY = "mp-theme";
 
-class ThemeSuggestModal extends FuzzySuggestModal<WemdTheme> {
+class ThemeSuggestModal extends FuzzySuggestModal<MpTheme> {
   constructor(
-    private readonly plugin: WemdPlugin,
+    private readonly plugin: MpPlugin,
     private readonly file: TFile | null,
   ) {
     super(plugin.app);
-    this.setPlaceholder("选择 WeMD 主题");
+    this.setPlaceholder("选择主题");
   }
 
   getItems() {
     return this.plugin.themes.list();
   }
 
-  getItemText(theme: WemdTheme) {
-    return theme.isBuiltIn ? theme.name : `${theme.name}（自定义）`;
+  getItemText(theme: MpTheme) {
+    return `${theme.name}（${theme.isBuiltIn ? theme.group : "自定义主题"}）`;
   }
 
-  onChooseItem(theme: WemdTheme) {
+  onChooseItem(theme: MpTheme) {
     void this.plugin.setThemeForFile(this.file, theme.id);
   }
 }
 
-export default class WemdPlugin extends Plugin {
-  settings!: WemdSettings;
+export default class MpPlugin extends Plugin {
+  settings!: MpSettings;
   themes!: ThemeManager;
   private fontStyleEl: HTMLStyleElement | null = null;
 
@@ -49,14 +55,14 @@ export default class WemdPlugin extends Plugin {
 
     // Shadow DOM 内的 @font-face 不生效，KaTeX 字体需在文档级注册
     this.fontStyleEl = document.head.createEl("style", {
-      attr: { id: "wemd-katex-fonts" },
+      attr: { id: "mp-katex-fonts" },
     });
     this.fontStyleEl.textContent = katexCss;
 
-    this.registerView(VIEW_TYPE_WEMD, (leaf) => new WemdPreviewView(leaf, this));
-    this.addSettingTab(new WemdSettingTab(this.app, this));
+    this.registerView(VIEW_TYPE_MP, (leaf) => new MpPreviewView(leaf, this));
+    this.addSettingTab(new MpSettingTab(this.app, this));
 
-    this.addRibbonIcon("message-circle", "WeMD 公众号预览", () => {
+    this.addRibbonIcon("message-circle", "公众号排版预览", () => {
       void this.activateView();
     });
 
@@ -105,6 +111,10 @@ export default class WemdPlugin extends Plugin {
       }
     };
     this.app.workspace.onLayoutReady(async () => {
+      // 早期版本保存在工作区里的预览面板用的是旧类型，换成新类型，否则会显示成空白面板
+      for (const leaf of this.app.workspace.getLeavesOfType(LEGACY_VIEW_TYPE)) {
+        await leaf.setViewState({ type: VIEW_TYPE_MP, active: false });
+      }
       await this.reloadThemes();
       this.registerEvent(this.app.vault.on("create", (f) => onThemeFileChange(f)));
       this.registerEvent(this.app.vault.on("modify", (f) => onThemeFileChange(f)));
@@ -119,9 +129,23 @@ export default class WemdPlugin extends Plugin {
 
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    // 早期版本的主题 id 带前缀、主题文件夹用旧名，读取时换成现在的值。
+    // 库里已经有旧名文件夹的话保留原设置，避免已有的自定义主题找不到。
+    const themeId = migrateThemeId(this.settings.themeId);
+    // onload 时 vault 索引可能还没建好，直接查文件系统
+    const themeFolder = await migrateThemeFolder(
+      this.settings.themeFolder,
+      DEFAULT_SETTINGS.themeFolder,
+      (path) => this.app.vault.adapter.exists(path),
+    );
+    if (themeId !== this.settings.themeId || themeFolder !== this.settings.themeFolder) {
+      this.settings.themeId = themeId;
+      this.settings.themeFolder = themeFolder;
+      await this.saveData(this.settings);
+    }
   }
 
-  async updateSettings(patch: Partial<WemdSettings>) {
+  async updateSettings(patch: Partial<MpSettings>) {
     const themeAffecting =
       "themeFolder" in patch ||
       "customPrependBasic" in patch ||
@@ -145,22 +169,22 @@ export default class WemdPlugin extends Plugin {
     this.refreshViews();
   }
 
-  private views(): WemdPreviewView[] {
+  private views(): MpPreviewView[] {
     return this.app.workspace
-      .getLeavesOfType(VIEW_TYPE_WEMD)
+      .getLeavesOfType(VIEW_TYPE_MP)
       .map((l) => l.view)
-      .filter((v): v is WemdPreviewView => v instanceof WemdPreviewView);
+      .filter((v): v is MpPreviewView => v instanceof MpPreviewView);
   }
 
   refreshViews() {
     this.views().forEach((v) => v.refresh());
   }
 
-  /** 笔记 frontmatter wemd-theme 优先，其次全局默认 */
+  /** 笔记 frontmatter mp-theme（或早期的旧字段名）优先，其次全局默认 */
   themeIdForFile(file: TFile | null): string {
     if (file) {
       const fm = this.app.metadataCache.getFileCache(file)?.frontmatter;
-      const value = fm?.[FRONTMATTER_THEME_KEY];
+      const value = fm?.[FRONTMATTER_THEME_KEY] ?? fm?.[LEGACY_FRONTMATTER_KEY];
       if (typeof value === "string" && value.trim()) {
         return this.themes.get(value.trim()).id;
       }
@@ -168,13 +192,14 @@ export default class WemdPlugin extends Plugin {
     return this.settings.themeId;
   }
 
-  /** 若笔记已有 wemd-theme 则更新它，否则修改全局默认主题 */
+  /** 若笔记已指定主题则更新它（旧字段名一并换成 mp-theme），否则修改全局默认主题 */
   async setThemeForFile(file: TFile | null, themeId: string) {
     const fm = file
       ? this.app.metadataCache.getFileCache(file)?.frontmatter
       : undefined;
-    if (file && fm && FRONTMATTER_THEME_KEY in fm) {
+    if (file && fm && (FRONTMATTER_THEME_KEY in fm || LEGACY_FRONTMATTER_KEY in fm)) {
       await this.app.fileManager.processFrontMatter(file, (data) => {
+        delete data[LEGACY_FRONTMATTER_KEY];
         data[FRONTMATTER_THEME_KEY] = themeId;
       });
       // metadataCache 更新是异步的，稍后再刷新避免下拉框回跳
@@ -197,6 +222,7 @@ export default class WemdPlugin extends Plugin {
     const processed = preprocessObsidianMarkdown(this.app, source, file.path);
     const options = {
       showMacBar: this.settings.showMacBar,
+      macDotsImageUrl: this.settings.macDotsImageUrl,
       linkToFootnote: this.settings.linkToFootnote,
       tableWrap: this.settings.tableWrap,
       resolveImages: (container: HTMLElement) =>
@@ -206,13 +232,13 @@ export default class WemdPlugin extends Plugin {
       if (kind === "wechat") await copyToWechat(processed, css, options);
       else await copyHtmlSource(processed, css, options);
     } catch (e) {
-      console.error("[WeMD] 复制失败:", e);
+      console.error("[mp] 复制失败:", e);
       new Notice(`复制失败: ${e instanceof Error ? e.message : e}`);
     }
   }
 
   async activateView() {
-    const existing = this.app.workspace.getLeavesOfType(VIEW_TYPE_WEMD)[0];
+    const existing = this.app.workspace.getLeavesOfType(VIEW_TYPE_MP)[0];
     if (existing) {
       this.app.workspace.revealLeaf(existing);
       return;
@@ -222,7 +248,7 @@ export default class WemdPlugin extends Plugin {
       new Notice("无法打开预览面板");
       return;
     }
-    await leaf.setViewState({ type: VIEW_TYPE_WEMD, active: true });
+    await leaf.setViewState({ type: VIEW_TYPE_MP, active: true });
     this.app.workspace.revealLeaf(leaf);
   }
 }

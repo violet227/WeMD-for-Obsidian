@@ -23,7 +23,7 @@ const MATHJAX_ONLY_COMMAND =
 
 const isMathJaxReady = (): boolean => {
   if (typeof window === "undefined") return false;
-  if (window.__wemdMathJaxVersion !== MATHJAX_READY_VERSION) return false;
+  if (window.__mpMathJaxVersion !== MATHJAX_READY_VERSION) return false;
   const mathJax = window.MathJax;
   return !!(mathJax?.tex2svg || mathJax?.tex2svgPromise);
 };
@@ -336,7 +336,7 @@ export default (md: MarkdownIt, options: any) => {
 declare global {
   interface Window {
     /** MathJax 配置版本，由 apps/web 的 mathJaxLoader 写入 */
-    __wemdMathJaxVersion?: number;
+    __mpMathJaxVersion?: number;
     MathJax?: {
       tex2svg?: (math: string, options: { display: boolean }) => HTMLElement;
       tex2svgPromise?: (

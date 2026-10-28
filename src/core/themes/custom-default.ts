@@ -6,7 +6,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
  */
 
 /* 全局 */
-#wemd {
+#mp {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #242a26;
   line-height: 1.8;
@@ -15,7 +15,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 段落 */
-#wemd p {
+#mp p {
   margin: 16px 0;
   font-size: 16px;
   color: #242a26;
@@ -24,7 +24,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 一级标题 · 刊头：翡翠压顶线 + 左对齐大字墨题 */
-#wemd h1 {
+#mp h1 {
   font-size: 30px;
   font-weight: 800;
   color: #12241c;
@@ -37,7 +37,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 二级标题 · 章节：深松墨 + 翡翠底线，形成栏目分节 */
-#wemd h2 {
+#mp h2 {
   font-size: 22px;
   font-weight: 700;
   color: #134034;
@@ -49,7 +49,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 三级标题 · 翡翠左锚 */
-#wemd h3 {
+#mp h3 {
   font-size: 18px;
   font-weight: 600;
   color: #134034;
@@ -61,7 +61,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 四级标题 · 翡翠字距标签 */
-#wemd h4 {
+#mp h4 {
   font-size: 14px;
   font-weight: 700;
   color: #047857;
@@ -71,7 +71,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 五级标题 */
-#wemd h5 {
+#mp h5 {
   font-size: 15px;
   font-weight: 600;
   color: #55605a;
@@ -80,7 +80,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 六级标题:最次级墨灰,压深至对白底 ≥ AA 4.5:1 */
-#wemd h6 {
+#mp h6 {
   font-size: 14px;
   font-weight: 600;
   color: #606b64;
@@ -89,42 +89,42 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 无序列表：翡翠符号 + 墨色内容 */
-#wemd ul {
+#mp ul {
   padding-left: 24px;
   list-style-type: disc;
   color: #242a26;
 }
 
-#wemd ul li {
+#mp ul li {
   padding-left: 6px;
   color: #047857;
 }
 
-#wemd ul li section {
+#mp ul li section {
   color: #242a26;
 }
 
-#wemd ul ul {
+#mp ul ul {
   list-style-type: circle;
 }
 
-#wemd ul ul ul {
+#mp ul ul ul {
   list-style-type: square;
 }
 
 /* 有序列表 */
-#wemd ol {
+#mp ol {
   padding-left: 24px;
   list-style-type: decimal;
   color: #242a26;
 }
 
-#wemd ol li {
+#mp ol li {
   padding-left: 6px;
   color: #047857;
 }
 
-#wemd li section {
+#mp li section {
   margin: 7px 0;
   line-height: 1.8;
   font-size: 16px;
@@ -132,7 +132,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 一级引用：翡翠左锚 + 极浅翡翠底，右侧圆角 */
-#wemd .multiquote-1 {
+#mp .multiquote-1 {
   border-left: 3px solid #047857;
   background: #f0f6f3;
   padding: 16px 20px;
@@ -142,7 +142,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   box-shadow: none;
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
   margin: 0;
   font-size: 15.5px;
   color: #3f4a44;
@@ -150,7 +150,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 二级引用（覆盖 basic 的投影） */
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
   border-left: 3px solid #065f46;
   background: #f6f8f7;
   padding: 14px 18px;
@@ -159,7 +159,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   box-shadow: none;
 }
 
-#wemd .multiquote-2 p {
+#mp .multiquote-2 p {
   margin: 0;
   font-size: 15px;
   color: #55605a;
@@ -167,7 +167,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 三级引用（覆盖 basic 的投影） */
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
   border-left: 2px solid #86c9ae;
   background: #f6f8f7;
   padding: 12px 16px;
@@ -176,14 +176,14 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   box-shadow: none;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
   margin: 0;
   font-size: 14px;
   color: #55605a;
 }
 
 /* 链接：翡翠 + 细下划线 */
-#wemd a {
+#mp a {
   color: #047857;
   text-decoration: none;
   border-bottom: 1px solid rgba(4, 120, 87, 0.4);
@@ -191,33 +191,33 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 加粗：墨色强调，不染色 */
-#wemd strong {
+#mp strong {
   font-weight: 700;
   color: #12241c;
   letter-spacing: 0.2px;
 }
 
 /* 斜体：墨色 */
-#wemd em {
+#mp em {
   font-style: italic;
   color: #242a26;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
   font-weight: 700;
   font-style: italic;
   color: #12241c;
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
   text-decoration: line-through;
   color: #606b64;
 }
 
 /* 分隔线 · 居中短翡翠条 */
-#wemd hr {
+#mp hr {
   border: none;
   height: 2px;
   width: 48px;
@@ -226,7 +226,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 图片 */
-#wemd img {
+#mp img {
   display: block;
   margin: 6px auto;
   max-width: 100%;
@@ -234,7 +234,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 图片描述 */
-#wemd figcaption {
+#mp figcaption {
   text-align: center;
   font-size: 14px;
   color: #606b64;
@@ -243,7 +243,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 链接图片说明：覆盖基础主题的黑底悬浮样式 */
-#wemd figure a + figcaption {
+#mp figure a + figcaption {
   margin-top: 10px;
   background: transparent;
   color: #606b64;
@@ -251,7 +251,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 行内代码：浅翡翠底 + 翡翠墨字 */
-#wemd p code, #wemd li code, #wemd td code, #wemd th code {
+#mp p code, #mp li code, #mp td code, #mp th code {
   background: #eef6f1;
   padding: 2px 6px;
   border-radius: 4px;
@@ -263,8 +263,8 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 代码块容器：中性发丝边 */
-#wemd pre code,
-#wemd pre code.hljs {
+#mp pre code,
+#mp pre code.hljs {
   display: block;
   background: #f7f9f8;
   padding: 18px;
@@ -278,13 +278,13 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 表格 · 编辑式：去竖线，仅横向分隔，表头翡翠底线 */
-#wemd table tr {
+#mp table tr {
   border: none;
   background-color: transparent;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   border: none;
   border-bottom: 1px solid #e4e9e6;
   padding: 11px 14px;
@@ -294,7 +294,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   text-align: left;
 }
 
-#wemd table tr th {
+#mp table tr th {
   border-bottom: 2px solid #047857;
   background: transparent;
   color: #134034;
@@ -302,28 +302,28 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   letter-spacing: 0.3px;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background-color: transparent;
 }
 
-#wemd table tr th:nth-of-type(n),
-#wemd table tr td:nth-of-type(n){
+#mp table tr th:nth-of-type(n),
+#mp table tr td:nth-of-type(n){
   min-width: 100px;
 }
 
 /* 脚注 */
-#wemd .footnote-word {
+#mp .footnote-word {
   color: #047857;
   font-weight: 500;
   border-bottom: 1px dashed rgba(4, 120, 87, 0.5);
 }
 
-#wemd .footnote-ref {
+#mp .footnote-ref {
   color: #047857;
   font-weight: 600;
 }
 
-#wemd .footnotes-sep:before {
+#mp .footnotes-sep:before {
   content: "参考资料";
   font-weight: 700;
   margin-top: 38px;
@@ -334,7 +334,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   letter-spacing: 0.5px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   display: inline-block;
   width: 24px;
   text-align: right;
@@ -343,40 +343,40 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   font-weight: 500;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   display: inline;
   font-size: 14px;
   color: #55605a;
   line-height: 1.8;
 }
 
-#wemd .footnote-item p em {
+#mp .footnote-item p em {
   font-style: normal;
   color: #606b64;
   margin-left: 6px;
 }
 
 /* 行间公式 */
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   display: block;
   margin: 20px auto;
   max-width: 300% !important;
 }
 
 /* 行内公式 */
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
   vertical-align: middle;
 }
 
 /* Callout 提示块：扁平化，去投影渐变；语义色左边线由 basic 提供 */
-#wemd .callout {
+#mp .callout {
   margin: 26px 0;
   padding: 18px 20px;
   border-radius: 12px;
   box-shadow: none;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -387,19 +387,19 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   letter-spacing: 0.03em;
 }
 
-#wemd .callout-icon {
+#mp .callout-icon {
   margin-right: 8px;
   font-size: 18px;
 }
 
 /* 提示类 callout 与主题强调色对齐，其余保持语义色 */
-#wemd .callout-tip {
+#mp .callout-tip {
   border-left-color: #047857;
   background: #ecf6f1;
 }
 
 /* 高亮文本：柔和扁平 */
-#wemd mark {
+#mp mark {
   background: #f6eec6;
   color: #1a1a1a;
   padding: 2px 5px;
@@ -408,21 +408,21 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 }
 
 /* 上标 */
-#wemd sup {
+#mp sup {
   font-size: 0.75em;
   vertical-align: super;
   color: #047857;
 }
 
 /* 下标 */
-#wemd sub {
+#mp sub {
   font-size: 0.75em;
   vertical-align: sub;
   color: #047857;
 }
 
 /* Imageflow */
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   border: 0px none;
@@ -430,13 +430,13 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -446,7 +446,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -455,7 +455,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;

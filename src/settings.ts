@@ -1,26 +1,40 @@
 import { App, Modal, Notice, PluginSettingTab, Setting, TFile } from "obsidian";
-import type WemdPlugin from "./main";
-import { CODE_THEMES, type CodeThemeId } from "./themes";
+import type MpPlugin from "./main";
+import { CODE_THEMES, type CodeThemeId, type MpTheme } from "./themes";
 
-export interface WemdSettings {
+/** 下拉框按分组填充主题（Obsidian 的 DropdownComponent 不支持 optgroup） */
+const fillGroupedOptions = (
+  select: HTMLSelectElement,
+  groups: [string, MpTheme[]][],
+) => {
+  for (const [label, themes] of groups) {
+    const group = select.createEl("optgroup", { attr: { label } });
+    themes.forEach((t) => group.createEl("option", { value: t.id, text: t.name }));
+  }
+};
+
+export interface MpSettings {
   themeId: string;
   themeFolder: string;
-  /** 自定义主题前是否拼接 WeMD basic 基础样式 */
+  /** 自定义主题前是否拼接 basic 基础样式 */
   customPrependBasic: boolean;
   /** 自定义主题使用的代码高亮 */
   customCodeTheme: CodeThemeId;
   showMacBar: boolean;
+  /** Mac 风格代码栏圆点的外链图片地址，复制到公众号时使用 */
+  macDotsImageUrl: string;
   linkToFootnote: boolean;
   tableWrap: boolean;
   syncScroll: boolean;
 }
 
-export const DEFAULT_SETTINGS: WemdSettings = {
+export const DEFAULT_SETTINGS: MpSettings = {
   themeId: "default",
-  themeFolder: "wemd-themes",
+  themeFolder: "mp-themes",
   customPrependBasic: true,
   customCodeTheme: "github",
   showMacBar: false,
+  macDotsImageUrl: "",
   linkToFootnote: false,
   tableWrap: false,
   syncScroll: true,
@@ -67,10 +81,10 @@ class NameModal extends Modal {
   }
 }
 
-export class WemdSettingTab extends PluginSettingTab {
+export class MpSettingTab extends PluginSettingTab {
   constructor(
     app: App,
-    private readonly plugin: WemdPlugin,
+    private readonly plugin: MpPlugin,
   ) {
     super(app, plugin);
   }
@@ -82,9 +96,9 @@ export class WemdSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("默认主题")
-      .setDesc("笔记 frontmatter 中的 wemd-theme 字段可覆盖此设置。")
+      .setDesc("笔记 frontmatter 中的 mp-theme 字段可覆盖此设置。")
       .addDropdown((dd) => {
-        themes.list().forEach((t) => dd.addOption(t.id, t.name));
+        fillGroupedOptions(dd.selectEl, themes.grouped());
         dd.setValue(settings.themeId).onChange(async (v) => {
           await this.plugin.updateSettings({ themeId: v });
         });
@@ -96,6 +110,21 @@ export class WemdSettingTab extends PluginSettingTab {
         t.setValue(settings.showMacBar).onChange(async (v) => {
           await this.plugin.updateSettings({ showMacBar: v });
         }),
+      );
+
+    new Setting(containerEl)
+      .setName("Mac 标题栏圆点图片地址")
+      .setDesc(
+        "公众号会丢弃代码栏里的红黄绿圆点，复制时需要换成一张外链图片（45×13 的 SVG/PNG）。" +
+          "填写你图床上的图片地址；留空则复制到公众号时不显示圆点，预览不受影响。",
+      )
+      .addText((t) =>
+        t
+          .setPlaceholder("https://你的图床/mac-dots.svg")
+          .setValue(settings.macDotsImageUrl)
+          .onChange(async (v) => {
+            await this.plugin.updateSettings({ macDotsImageUrl: v.trim() });
+          }),
       );
 
     new Setting(containerEl)
@@ -130,18 +159,18 @@ export class WemdSettingTab extends PluginSettingTab {
     new Setting(containerEl)
       .setName("主题文件夹")
       .setDesc(
-        "该文件夹下的每个 .css 文件即一个主题。选择器请以 #wemd 开头；首行可写 /* name: 主题名 */。",
+        "该文件夹下的每个 .css 文件即一个主题。选择器请以 #mp 开头；首行可写 /* name: 主题名 */。",
       )
       .addText((t) =>
         t.setValue(settings.themeFolder).onChange(async (v) => {
           await this.plugin.updateSettings({
-            themeFolder: v.trim().replace(/^\/+|\/+$/g, "") || "wemd-themes",
+            themeFolder: v.trim().replace(/^\/+|\/+$/g, "") || "mp-themes",
           });
         }),
       );
 
     new Setting(containerEl)
-      .setName("拼接 WeMD 基础样式")
+      .setName("拼接基础样式")
       .setDesc("开启后自定义 CSS 叠加在 basic 基础样式之上，只需写差异部分。")
       .addToggle((t) =>
         t.setValue(settings.customPrependBasic).onChange(async (v) => {
@@ -167,7 +196,10 @@ export class WemdSettingTab extends PluginSettingTab {
       .setName("新建自定义主题")
       .setDesc("复制一个内置主题的 CSS 到主题文件夹，作为起点修改。")
       .addDropdown((dd) => {
-        themes.builtIns().forEach((t) => dd.addOption(t.id, t.name));
+        fillGroupedOptions(
+          dd.selectEl,
+          themes.grouped().filter(([label]) => label !== "自定义主题"),
+        );
         if (!themes.builtIns().some((t) => t.id === baseId)) baseId = "default";
         dd.setValue(baseId).onChange((v) => (baseId = v));
       })

@@ -1,5 +1,5 @@
 export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
-#wemd {
+#mp {
   max-width: 677px;
   margin: 0 auto;
   padding: 24px 28px;
@@ -12,7 +12,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   word-break: break-word;
 }
 
-#wemd p {
+#mp p {
   margin: 0 0 29px;
   color: #36322f;
   font-size: 17px;
@@ -21,16 +21,16 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-wrap: pretty;
 }
 
-#wemd h1,
-#wemd h2,
-#wemd h3,
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h1,
+#mp h2,
+#mp h3,
+#mp h4,
+#mp h5,
+#mp h6 {
   text-align: left;
 }
 
-#wemd h1 {
+#mp h1 {
   max-width: 7em;
   margin: 38px 0 72px auto;
   padding: 0 8px 0 0;
@@ -38,7 +38,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: right;
 }
 
-#wemd h1::after {
+#mp h1::after {
   content: "";
   display: block;
   width: 18px;
@@ -47,7 +47,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   background: #a33a2b;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
   display: inline-block;
   max-width: 100%;
   color: #282522;
@@ -58,14 +58,14 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-wrap: balance;
 }
 
-#wemd h2 {
+#mp h2 {
   margin: 58px 0 30px;
   padding: 0 8px 0 0;
   border: none;
   text-align: right;
 }
 
-#wemd h2::before {
+#mp h2::before {
   content: "◆";
   display: block;
   margin-bottom: 8px;
@@ -74,7 +74,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: right;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
   color: #a33a2b;
   font-size: 21px;
   font-weight: 700;
@@ -82,11 +82,11 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-wrap: balance;
 }
 
-#wemd h3 {
+#mp h3 {
   margin: 40px 0 21px 2em;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
   display: inline;
   padding: 0;
   color: #a33a2b;
@@ -98,51 +98,51 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-wrap: balance;
 }
 
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h4,
+#mp h5,
+#mp h6 {
   margin: 29px 0 14px;
   padding: 0;
   border: none;
 }
 
-#wemd h4 .content,
-#wemd h5 .content,
-#wemd h6 .content {
+#mp h4 .content,
+#mp h5 .content,
+#mp h6 .content {
   color: #514841;
   font-size: 16px;
   font-weight: 700;
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix,
-#wemd h2 .prefix,
-#wemd h2 .suffix,
-#wemd h3 .prefix,
-#wemd h3 .suffix,
-#wemd h4 .prefix,
-#wemd h4 .suffix,
-#wemd h5 .prefix,
-#wemd h5 .suffix,
-#wemd h6 .prefix,
-#wemd h6 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix,
+#mp h2 .prefix,
+#mp h2 .suffix,
+#mp h3 .prefix,
+#mp h3 .suffix,
+#mp h4 .prefix,
+#mp h4 .suffix,
+#mp h5 .prefix,
+#mp h5 .suffix,
+#mp h6 .prefix,
+#mp h6 .suffix {
   display: none;
 }
 
-#wemd blockquote {
+#mp blockquote {
   border: none;
 }
 
-#wemd .multiquote-1,
-#wemd .multiquote-2,
-#wemd .multiquote-3 {
+#mp .multiquote-1,
+#mp .multiquote-2,
+#mp .multiquote-3 {
   margin: 46px 8px;
   padding: 8px 24px;
   border: none;
   background: transparent;
 }
 
-#wemd .multiquote-1::before {
+#mp .multiquote-1::before {
   content: "“";
   display: block;
   color: #a33a2b;
@@ -151,9 +151,9 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: center;
 }
 
-#wemd .multiquote-1 p,
-#wemd .multiquote-2 p,
-#wemd .multiquote-3 p {
+#mp .multiquote-1 p,
+#mp .multiquote-2 p,
+#mp .multiquote-3 p {
   margin: 0;
   color: #564c45;
   font-size: 18px;
@@ -161,39 +161,39 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: center;
 }
 
-#wemd .multiquote-2,
-#wemd .multiquote-3,
-#wemd .multiquote-1 .multiquote-1 {
+#mp .multiquote-2,
+#mp .multiquote-3,
+#mp .multiquote-1 .multiquote-1 {
   margin: 12px 0 0;
   padding: 8px 0 0;
   border: none;
 }
 
-#wemd .multiquote-1 .multiquote-1::before {
+#mp .multiquote-1 .multiquote-1::before {
   display: none;
 }
 
-#wemd ul,
-#wemd ol {
+#mp ul,
+#mp ol {
   margin: 22px 0 28px;
   padding-left: 25px;
   color: #a33a2b;
 }
 
-#wemd li section {
+#mp li section {
   margin: 7px 0;
   color: #36322f;
   line-height: 1.88;
 }
 
-#wemd ol > li > section {
+#mp ol > li > section {
   padding: 3px 0 9px;
   border: none;
   border-bottom: 1px dotted #bfb4aa;
   background: transparent;
 }
 
-#wemd a {
+#mp a {
   color: #8c3025;
   font-weight: 600;
   text-decoration: underline;
@@ -201,7 +201,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-underline-offset: 0.22em;
 }
 
-#wemd strong {
+#mp strong {
   color: #272320;
   font-weight: 700;
   text-decoration: underline;
@@ -210,13 +210,13 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-underline-offset: 0.18em;
 }
 
-#wemd mark {
+#mp mark {
   padding: 1px 4px;
   color: #4f2822;
   background: #efd9d4;
 }
 
-#wemd hr {
+#mp hr {
   width: 8px;
   height: 8px;
   margin: 64px auto;
@@ -224,26 +224,26 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   background: #a33a2b;
 }
 
-#wemd figure {
+#mp figure {
   margin: 48px 0 54px;
   padding: 0;
   border: none;
   break-inside: avoid;
 }
 
-#wemd figure a {
+#mp figure a {
   border: none;
 }
 
-#wemd img,
-#wemd figure a img {
+#mp img,
+#mp figure a img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
-#wemd figcaption {
+#mp figcaption {
   margin-top: 12px;
   color: #746860;
   font-size: 12px;
@@ -252,10 +252,10 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: right;
 }
 
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
   padding: 2px 6px;
   border: 1px solid #d4cbc3;
   color: #8c3025;
@@ -264,7 +264,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   font-size: 13px;
 }
 
-#wemd pre {
+#mp pre {
   margin: 32px 0;
   border: 1px solid #403a35;
   border-top: 6px solid #a33a2b;
@@ -272,8 +272,8 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   overflow-x: auto;
 }
 
-#wemd pre code,
-#wemd pre code.hljs {
+#mp pre code,
+#mp pre code.hljs {
   display: block;
   min-width: max-content;
   padding: 20px;
@@ -285,18 +285,18 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   white-space: pre;
 }
 
-#wemd pre.custom > .mac-sign {
+#mp pre.custom > .mac-sign {
   display: block;
   border-bottom: 1px solid #5d554e;
   background: #2e2a27;
 }
 
-#wemd .table-container {
+#mp .table-container {
   margin: 34px 0;
   overflow-x: auto;
 }
 
-#wemd table {
+#mp table {
   width: 100%;
   border-collapse: collapse;
   color: #3d3732;
@@ -304,8 +304,8 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   text-align: left;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   min-width: 88px;
   padding: 11px 10px;
   border: none;
@@ -314,7 +314,7 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   line-height: 1.65;
 }
 
-#wemd table tr th {
+#mp table tr th {
   border-top: 1px solid #5a4e46;
   border-bottom: 2px solid #5a4e46;
   color: #a33a2b;
@@ -322,11 +322,11 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   font-weight: 700;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background: #f0ede9;
 }
 
-#wemd .callout {
+#mp .callout {
   margin: 31px 0;
   padding: 18px 4px;
   border: none;
@@ -338,55 +338,55 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   break-inside: avoid;
 }
 
-#wemd .callout-warning,
-#wemd .callout-caution {
+#mp .callout-warning,
+#mp .callout-caution {
   border-color: #a33a2b;
   background: transparent;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   margin-bottom: 8px;
   color: #5a2d26;
   font-weight: 700;
 }
 
-#wemd .callout p {
+#mp .callout p {
   margin: 0;
   color: #564c45;
   font-size: 15px;
 }
 
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
   color: #a33a2b;
   font-weight: 700;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
   margin-top: 52px;
   padding-top: 18px;
   border-top: 4px double #4c4640;
 }
 
-#wemd .footnote-item {
+#mp .footnote-item {
   display: flex;
   margin-top: 9px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   width: 30px;
   flex-shrink: 0;
   color: #a33a2b;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   margin: 0;
   color: #746860;
   font-size: 13px;
   text-align: left;
 }
 
-#wemd .block-equation {
+#mp .block-equation {
   display: block;
   margin: 32px 0;
   padding: 19px 10px;
@@ -396,29 +396,29 @@ export const easternNotesTheme = `/* 东方笺谱：现代人文长文 */
   overflow-x: auto;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   max-width: 300% !important;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
   vertical-align: middle;
 }
 
-#wemd pre.mermaid {
+#mp pre.mermaid {
   padding: 20px 10px;
   border: 1px solid #c2b7ae;
   border-top: 5px solid #a33a2b;
   background: #faf9f7;
 }
 
-#wemd .task-list-item {
+#mp .task-list-item {
   display: flex;
   align-items: flex-start;
   margin-left: -1.2em;
   list-style: none;
 }
 
-#wemd .task-list-item input[type='checkbox'] {
+#mp .task-list-item input[type='checkbox'] {
   margin-top: 8px;
   margin-right: 8px;
   accent-color: #a33a2b;

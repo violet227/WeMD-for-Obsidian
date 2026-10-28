@@ -74,9 +74,9 @@ const visitTokens = (
 const isReservedAttribute = ([name, value]: [string, string]): boolean => {
   const normalizedName = name.toLowerCase();
   return (
-    (normalizedName === "id" && value.toLowerCase() === "wemd") ||
+    (normalizedName === "id" && value.toLowerCase() === "mp") ||
     normalizedName === "data-tool" ||
-    normalizedName.startsWith("data-wemd-")
+    normalizedName.startsWith("data-mp-")
   );
 };
 
@@ -95,8 +95,8 @@ const createPlaceholders = (state: StateCore): BracePlaceholders => {
   let suffix = 0;
   while (true) {
     const placeholders = {
-      left: `\uE000wemd-attrs-left-${suffix}\uE001`,
-      right: `\uE000wemd-attrs-right-${suffix}\uE001`,
+      left: `\uE000mp-attrs-left-${suffix}\uE001`,
+      right: `\uE000mp-attrs-right-${suffix}\uE001`,
     };
     if (
       !originalText.includes(placeholders.left) &&
@@ -125,7 +125,7 @@ const allowsBlockAttributes = (tokens: Token[], index: number): boolean => {
   if (parent?.type === "heading_open") return true;
   if (parent?.type !== "paragraph_open") return false;
   if (parent.hidden) return false;
-  if (tokens[index - 2]?.type === "wemd_list_item_open") return false;
+  if (tokens[index - 2]?.type === "mp_list_item_open") return false;
   if (HORIZONTAL_RULE_WITH_ATTRIBUTES.test(token.content)) return false;
   if (endsWithSoftbreakAttribute(token)) return false;
 
@@ -142,7 +142,7 @@ export default (md: MarkdownIt): void => {
 
   md.core.ruler.before(
     "curly_attributes",
-    "wemd_protect_attribute_syntax",
+    "mp_protect_attribute_syntax",
     (state: StateCore) => {
       const placeholders = createPlaceholders(state);
       statePlaceholders.set(state, placeholders);
@@ -153,7 +153,7 @@ export default (md: MarkdownIt): void => {
       state.tokens.forEach((token, index) => {
         if (LIST_TOKEN_TYPES.has(token.type)) {
           originalTokenTypes.set(token, token.type);
-          token.type = `wemd_${token.type}`;
+          token.type = `mp_${token.type}`;
         }
         if (token.type === "inline") {
           const allowAttributes = allowsBlockAttributes(state.tokens, index);
@@ -191,7 +191,7 @@ export default (md: MarkdownIt): void => {
 
   md.core.ruler.after(
     "curly_attributes",
-    "wemd_attribute_policy",
+    "mp_attribute_policy",
     (state: StateCore) => {
       const placeholders = statePlaceholders.get(state);
       if (!placeholders) return;

@@ -1,5 +1,5 @@
 export const codeGithubDarkTheme = `/* GitHub Dark 代码高亮 */
-#wemd .hljs {
+#mp .hljs {
   display: block;
   overflow-x: auto;
   padding: 16px;
@@ -7,89 +7,89 @@ export const codeGithubDarkTheme = `/* GitHub Dark 代码高亮 */
   background: #0d1117;
 }
 
-#wemd .hljs-doctag,
-#wemd .hljs-keyword,
-#wemd .hljs-meta .hljs-keyword,
-#wemd .hljs-template-tag,
-#wemd .hljs-template-variable,
-#wemd .hljs-type,
-#wemd .hljs-variable.language_ {
+#mp .hljs-doctag,
+#mp .hljs-keyword,
+#mp .hljs-meta .hljs-keyword,
+#mp .hljs-template-tag,
+#mp .hljs-template-variable,
+#mp .hljs-type,
+#mp .hljs-variable.language_ {
   color: #ff7b72;
 }
 
-#wemd .hljs-title,
-#wemd .hljs-title.class_,
-#wemd .hljs-title.class_.inherited__,
-#wemd .hljs-title.function_ {
+#mp .hljs-title,
+#mp .hljs-title.class_,
+#mp .hljs-title.class_.inherited__,
+#mp .hljs-title.function_ {
   color: #d2a8ff;
 }
 
-#wemd .hljs-attr,
-#wemd .hljs-attribute,
-#wemd .hljs-literal,
-#wemd .hljs-meta,
-#wemd .hljs-number,
-#wemd .hljs-operator,
-#wemd .hljs-variable,
-#wemd .hljs-selector-attr,
-#wemd .hljs-selector-class,
-#wemd .hljs-selector-id {
+#mp .hljs-attr,
+#mp .hljs-attribute,
+#mp .hljs-literal,
+#mp .hljs-meta,
+#mp .hljs-number,
+#mp .hljs-operator,
+#mp .hljs-variable,
+#mp .hljs-selector-attr,
+#mp .hljs-selector-class,
+#mp .hljs-selector-id {
   color: #79c0ff;
 }
 
-#wemd .hljs-regexp,
-#wemd .hljs-string,
-#wemd .hljs-meta .hljs-string {
+#mp .hljs-regexp,
+#mp .hljs-string,
+#mp .hljs-meta .hljs-string {
   color: #a5d6ff;
 }
 
-#wemd .hljs-built_in,
-#wemd .hljs-symbol {
+#mp .hljs-built_in,
+#mp .hljs-symbol {
   color: #ffa657;
 }
 
-#wemd .hljs-comment,
-#wemd .hljs-code,
-#wemd .hljs-formula {
+#mp .hljs-comment,
+#mp .hljs-code,
+#mp .hljs-formula {
   color: #9198a1;
 }
 
-#wemd .hljs-name,
-#wemd .hljs-quote,
-#wemd .hljs-selector-tag,
-#wemd .hljs-selector-pseudo {
+#mp .hljs-name,
+#mp .hljs-quote,
+#mp .hljs-selector-tag,
+#mp .hljs-selector-pseudo {
   color: #7ee787;
 }
 
-#wemd .hljs-subst,
-#wemd .hljs-emphasis,
-#wemd .hljs-strong {
+#mp .hljs-subst,
+#mp .hljs-emphasis,
+#mp .hljs-strong {
   color: #c9d1d9;
 }
 
-#wemd .hljs-section {
+#mp .hljs-section {
   color: #58a6ff;
   font-weight: bold;
 }
 
-#wemd .hljs-bullet {
+#mp .hljs-bullet {
   color: #f2cc60;
 }
 
-#wemd .hljs-emphasis {
+#mp .hljs-emphasis {
   font-style: italic;
 }
 
-#wemd .hljs-strong {
+#mp .hljs-strong {
   font-weight: bold;
 }
 
-#wemd .hljs-addition {
+#mp .hljs-addition {
   color: #aff5b4;
   background-color: #033a16;
 }
 
-#wemd .hljs-deletion {
+#mp .hljs-deletion {
   color: #ffdcd7;
   background-color: #67060c;
 }

@@ -1,0 +1,40 @@
+import type { Theme } from '../../types'
+import { hljsLight } from '../../hljs-maps'
+
+/** GitHub */
+export const theme: Theme = {
+  id: 'github',
+  name: 'GitHub',
+  description: "开发者的肌肉记忆，README 即视感",
+  category: 'daily',
+  previewBackground: '#ffffff',
+  hljsStyleMap: hljsLight,
+  styles: {
+    root: 'color:#24292e;font-size:15px;line-height:1.8;word-break:break-word;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;',
+    h1: 'margin:1.6em 0 0.7em;font-size:1.6em;font-weight:700;color:#1f2328;border-bottom:1px solid #eaecef;padding-bottom:0.35em;',
+    h2: 'margin:1.5em 0 0.6em;font-size:1.32em;font-weight:700;color:#1f2328;border-bottom:1px solid #eaecef;padding-bottom:0.35em;',
+    h3: 'margin:1.4em 0 0.5em;font-size:1.18em;font-weight:600;color:#1f2328;',
+    h4: 'margin:1.3em 0 0.5em;font-size:1.05em;font-weight:600;color:#1f2328;',
+    h5: 'margin:1.2em 0 0.4em;font-size:1em;font-weight:600;color:#444444;',
+    h6: 'margin:1.1em 0 0.4em;font-size:0.92em;font-weight:600;color:#6a737d;',
+    p: 'margin:1em 0;',
+    a: 'color:#0366d6;text-decoration:none;border-bottom:1px solid rgba(3,102,214,0.3);',
+    strong: 'font-weight:700;color:#1f2328;',
+    em: 'font-style:italic;',
+    del: 'text-decoration:line-through;color:#6a737d;',
+    ul: 'margin:1em 0;padding-left:1.6em;',
+    ol: 'margin:1em 0;padding-left:1.6em;',
+    li: 'margin:0.35em 0;',
+    blockquote: 'margin:1.4em 0;padding:0.2em 1em;border-left:4px solid #dfe2e5;color:#6a737d;',
+    code: 'background:rgba(27,31,35,0.06);padding:0.2em 0.45em;border-radius:4px;font-size:0.88em;font-family:"SFMono-Regular",Consolas,Menlo,monospace;',
+    codeBlock: 'font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;line-height:1.6;color:#24292e;',
+    codeBlockWrapper: 'background:#f6f8fa;padding:16px;border-radius:8px;overflow-x:auto;margin:1.4em 0;',
+    table: 'border-collapse:collapse;margin:1.4em 0;width:100%;font-size:0.95em;',
+    thead: '',
+    th: 'border:1px solid #dfe2e5;padding:7px 13px;background:#f6f8fa;font-weight:600;color:#24292e;',
+    td: 'border:1px solid #dfe2e5;padding:7px 13px;',
+    tr: '',
+    img: 'max-width:100%;display:block;margin:1.4em auto;border-radius:6px;',
+    hr: 'border:none;border-top:1px solid #eaecef;margin:2em 0;',
+  },
+}

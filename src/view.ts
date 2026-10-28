@@ -13,14 +13,14 @@ import { convertLinksToFootnotes } from "./wechat/linkFootnote";
 import { getMermaidConfig, getThemedMermaidDiagram } from "./wechat/mermaidConfig";
 import { renderTableBlocksForPreview } from "./wechat/wechatTableRenderer";
 import { preprocessObsidianMarkdown, resolveAssets } from "./obsidianMarkdown";
-import type WemdPlugin from "./main";
+import type MpPlugin from "./main";
 
-export const VIEW_TYPE_WEMD = "wemd-preview";
+export const VIEW_TYPE_MP = "mp-preview";
 
 // 预览外框：模拟手机阅读宽度，白底与公众号一致
 const FRAME_CSS = `
 :host { display: block; }
-.wemd-frame {
+.mp-frame {
   max-width: 420px;
   margin: 12px auto 40px;
   padding: 20px 0;
@@ -31,13 +31,13 @@ const FRAME_CSS = `
   border-radius: 8px;
   min-height: 200px;
 }
-.wemd-frame img { max-width: 100%; }
-.wemd-empty { text-align: center; color: #999; padding: 40px 0; font-size: 14px; }
+.mp-frame img { max-width: 100%; }
+.mp-empty { text-align: center; color: #999; padding: 40px 0; font-size: 14px; }
 `;
 
 let mermaidInitialized = false;
 
-export class WemdPreviewView extends ItemView {
+export class MpPreviewView extends ItemView {
   private file: TFile | null = null;
   private shadow!: ShadowRoot;
   private themeStyleEl!: HTMLStyleElement;
@@ -49,17 +49,17 @@ export class WemdPreviewView extends ItemView {
 
   constructor(
     leaf: WorkspaceLeaf,
-    private readonly plugin: WemdPlugin,
+    private readonly plugin: MpPlugin,
   ) {
     super(leaf);
   }
 
   getViewType() {
-    return VIEW_TYPE_WEMD;
+    return VIEW_TYPE_MP;
   }
 
   getDisplayText() {
-    return "WeMD 预览";
+    return "公众号排版预览";
   }
 
   getIcon() {
@@ -69,10 +69,10 @@ export class WemdPreviewView extends ItemView {
   async onOpen() {
     const root = this.contentEl;
     root.empty();
-    root.addClass("wemd-view");
+    root.addClass("mp-view");
 
-    const toolbar = root.createDiv({ cls: "wemd-toolbar" });
-    this.themeSelect = toolbar.createEl("select", { cls: "dropdown wemd-theme-select" });
+    const toolbar = root.createDiv({ cls: "mp-toolbar" });
+    this.themeSelect = toolbar.createEl("select", { cls: "dropdown mp-theme-select" });
     this.themeSelect.addEventListener("change", () => {
       void this.plugin.setThemeForFile(this.file, this.themeSelect.value);
     });
@@ -83,19 +83,19 @@ export class WemdPreviewView extends ItemView {
       el.addEventListener("click", onClick);
       return el;
     };
-    const copyBtn = toolbar.createEl("button", { cls: "mod-cta wemd-copy-btn", text: "复制到公众号" });
+    const copyBtn = toolbar.createEl("button", { cls: "mod-cta mp-copy-btn", text: "复制到公众号" });
     copyBtn.addEventListener("click", () => void this.copy("wechat"));
     btn("code", "复制 HTML 源码", () => void this.copy("html"));
     btn("refresh-cw", "刷新", () => void this.plugin.reloadThemes());
 
-    this.scrollEl = root.createDiv({ cls: "wemd-scroll" });
+    this.scrollEl = root.createDiv({ cls: "mp-scroll" });
     const host = this.scrollEl.createDiv();
     this.shadow = host.attachShadow({ mode: "open" });
     const baseStyle = document.createElement("style");
     baseStyle.textContent = FRAME_CSS + "\n" + katexCss;
     this.themeStyleEl = document.createElement("style");
     this.frameEl = document.createElement("div");
-    this.frameEl.className = "wemd-frame";
+    this.frameEl.className = "mp-frame";
     this.shadow.append(baseStyle, this.themeStyleEl, this.frameEl);
 
     this.registerEvent(
@@ -150,12 +150,7 @@ export class WemdPreviewView extends ItemView {
   private refreshThemeSelect() {
     const current = this.plugin.themeIdForFile(this.file);
     this.themeSelect.empty();
-    const groups: [string, ReturnType<typeof this.plugin.themes.list>][] = [
-      ["内置主题", this.plugin.themes.builtIns()],
-      ["自定义主题", this.plugin.themes.customs()],
-    ];
-    for (const [label, themes] of groups) {
-      if (themes.length === 0) continue;
+    for (const [label, themes] of this.plugin.themes.grouped()) {
       const group = this.themeSelect.createEl("optgroup", { attr: { label } });
       themes.forEach((t) => group.createEl("option", { value: t.id, text: t.name }));
     }
@@ -179,7 +174,7 @@ export class WemdPreviewView extends ItemView {
     const markdown = await this.readMarkdown();
     if (token !== this.renderToken) return;
     if (markdown === null || !this.file) {
-      this.frameEl.innerHTML = `<div class="wemd-empty">打开一篇 Markdown 笔记以预览</div>`;
+      this.frameEl.innerHTML = `<div class="mp-empty">打开一篇 Markdown 笔记以预览</div>`;
       return;
     }
 
@@ -192,7 +187,7 @@ export class WemdPreviewView extends ItemView {
     });
     let html = parser.render(source);
     if (settings.linkToFootnote) html = convertLinksToFootnotes(html);
-    // 预览不内联样式，直接注入 style（与 WeMD MarkdownPreview 一致）
+    // 预览不内联样式，直接注入 style
     const styled = processHtml(html, theme.css, false);
 
     const scrollTop = this.scrollEl.scrollTop;
@@ -217,13 +212,13 @@ export class WemdPreviewView extends ItemView {
       if (!diagram.trim()) continue;
       try {
         const { svg } = await mermaid.render(
-          `wemd-preview-${token}-${index}`,
+          `mp-preview-${token}-${index}`,
           getThemedMermaidDiagram(diagram, config),
         );
         if (token !== this.renderToken) return;
         block.innerHTML = svg;
       } catch (e) {
-        console.error("[WeMD] Mermaid render error:", e);
+        console.error("[mp] Mermaid render error:", e);
       }
     }
   }

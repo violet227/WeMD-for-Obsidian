@@ -1,0 +1,40 @@
+import type { Theme } from '../../types'
+import { hljsDark } from '../../hljs-maps'
+
+/** 极夜黑 */
+export const theme: Theme = {
+  id: 'dark-night',
+  name: '极夜黑',
+  description: '暗色阅读，Atom One Dark 代码配色',
+  category: 'dark',
+  previewBackground: '#242424',
+  hljsStyleMap: hljsDark,
+  styles: {
+    root: 'color:#d7dae0;font-size:15px;line-height:1.8;letter-spacing:0.3px;word-break:break-word;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;',
+    h1: 'margin:1.7em 0 0.9em;font-size:1.55em;font-weight:700;color:#ffffff;text-align:center;',
+    h2: 'margin:1.6em 0 0.7em;font-size:1.3em;font-weight:600;color:#ffffff;border-left:4px solid #61afef;padding-left:10px;',
+    h3: 'margin:1.4em 0 0.6em;font-size:1.15em;font-weight:600;color:#e5c07b;',
+    h4: 'margin:1.3em 0 0.5em;font-size:1.05em;font-weight:600;color:#e5c07b;',
+    h5: 'margin:1.2em 0 0.4em;font-size:1em;font-weight:600;color:#abb2bf;',
+    h6: 'margin:1.1em 0 0.4em;font-size:0.92em;font-weight:600;color:#abb2bf;',
+    p: 'margin:1em 0;',
+    a: 'color:#61afef;text-decoration:none;border-bottom:1px solid rgba(97,175,239,0.4);',
+    strong: 'font-weight:700;color:#ffffff;',
+    em: 'font-style:italic;color:#c0c4cc;',
+    del: 'text-decoration:line-through;color:#5c6370;',
+    ul: 'margin:1em 0;padding-left:1.6em;',
+    ol: 'margin:1em 0;padding-left:1.6em;',
+    li: 'margin:0.4em 0;',
+    blockquote: 'margin:1.4em 0;padding:0.8em 1.1em;border-left:4px solid #61afef;background:#2c313a;color:#abb2bf;',
+    code: 'background:#2c313a;color:#e06c75;padding:2px 6px;border-radius:4px;font-size:0.88em;font-family:"SFMono-Regular",Consolas,Menlo,monospace;',
+    codeBlock: 'font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;line-height:1.6;color:#abb2bf;',
+    codeBlockWrapper: 'background:#282c34;padding:16px;border-radius:8px;overflow-x:auto;margin:1.4em 0;',
+    table: 'border-collapse:collapse;margin:1.4em 0;width:100%;font-size:0.95em;',
+    thead: '',
+    th: 'border:1px solid #3e4451;background:#2c313a;padding:9px 13px;font-weight:600;color:#e5c07b;',
+    td: 'border:1px solid #3e4451;padding:9px 13px;',
+    tr: '',
+    img: 'max-width:100%;border-radius:6px;display:block;margin:1.4em auto;',
+    hr: 'border:none;border-top:1px solid #3e4451;margin:2.2em 0;',
+  },
+}

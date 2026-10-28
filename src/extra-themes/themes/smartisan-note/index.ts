@@ -1,0 +1,40 @@
+import type { Theme } from '../../types'
+import { hljsLight } from '../../hljs-maps'
+
+/** 锤子便签 */
+export const theme: Theme = {
+  id: 'smartisan-note',
+  name: '锤子便签',
+  description: '暖灰便签气质，随笔记录首选',
+  category: 'daily',
+  previewBackground: '#fdfcfb',
+  hljsStyleMap: hljsLight,
+  styles: {
+    root: 'color:#635753;font-size:15px;line-height:1.8;word-break:break-word;letter-spacing:0.3px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;',
+    h1: 'margin:1.8em 0 0.9em;font-size:1.5em;font-weight:700;color:#333333;text-align:center;',
+    h2: 'margin:1.6em 0 0.7em;font-size:1.25em;font-weight:700;color:#333333;',
+    h3: 'margin:1.4em 0 0.6em;font-size:1.12em;font-weight:700;color:#333333;padding-left:0.6em;',
+    h4: 'margin:1.3em 0 0.5em;font-size:1.05em;font-weight:600;color:#444444;',
+    h5: 'margin:1.2em 0 0.4em;font-size:1em;font-weight:600;color:#555555;',
+    h6: 'margin:1.1em 0 0.4em;font-size:0.92em;font-weight:600;color:#666666;',
+    p: 'margin:1.1em 0;text-align:justify;',
+    a: 'color:#635753;text-decoration:underline;text-underline-offset:3px;',
+    strong: 'font-weight:700;color:#333333;',
+    em: 'font-style:italic;color:#786a64;',
+    del: 'text-decoration:line-through;color:#b3a8a3;',
+    ul: 'margin:1em 0;padding-left:1.5em;list-style:disc;',
+    ol: 'margin:1em 0;padding-left:1.5em;list-style:decimal;',
+    li: 'margin:0.4em 0;color:#333333;',
+    blockquote: 'margin:1.4em 0;padding:1em 1.2em;border-left:4px solid #635753;background:#f5f4f2;border-radius:0 6px 6px 0;color:#666666;',
+    code: 'background:#f5f4f2;color:#9c4221;padding:2px 6px;border-radius:4px;font-size:0.85em;font-family:"SFMono-Regular",Consolas,Menlo,monospace;',
+    codeBlock: 'font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;line-height:1.6;color:#333333;',
+    codeBlockWrapper: 'background:#f5f4f2;padding:16px;border-radius:6px;overflow-x:auto;margin:1.4em 0;',
+    table: 'border-collapse:collapse;margin:1.4em 0;width:100%;font-size:0.95em;',
+    thead: '',
+    th: 'background:#f5f4f2;padding:9px 13px;text-align:left;font-weight:600;color:#635753;border:1px solid #e5e0db;',
+    td: 'padding:9px 13px;border:1px solid #e5e0db;',
+    tr: '',
+    img: 'max-width:100%;display:block;margin:1.4em auto;border-radius:6px;',
+    hr: 'border:none;border-top:1px solid #e5e0db;margin:2.2em 0;',
+  },
+}

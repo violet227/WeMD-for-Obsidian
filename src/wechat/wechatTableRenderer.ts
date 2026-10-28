@@ -66,7 +66,10 @@ const applyTableLayoutStyles = (
       el.style.minWidth = originalCellMinWidths.get(el) ?? "";
       originalCellMinWidths.delete(el);
     }
-    el.style.textAlign = "center";
+    // 主题用 !important 指定了对齐方式（如瑞士国际主义的全篇左对齐）时保留主题设置
+    if (el.style.getPropertyPriority("text-align") !== "important") {
+      el.style.textAlign = "center";
+    }
   }
 };
 

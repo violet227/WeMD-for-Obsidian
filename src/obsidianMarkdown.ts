@@ -1,15 +1,15 @@
 import { App, TFile } from "obsidian";
 
 /**
- * 把 Obsidian 特有语法转换成 WeMD 解析器认识的标准 Markdown。
- * 图片统一改写为 `wemd-asset://<vault 路径>` 占位，渲染后再按预览 / 复制场景替换真实地址。
+ * 把 Obsidian 特有语法转换成解析器认识的标准 Markdown。
+ * 图片统一改写为 `mp-asset://<vault 路径>` 占位，渲染后再按预览 / 复制场景替换真实地址。
  */
 
-export const ASSET_SCHEME = "wemd-asset://";
+export const ASSET_SCHEME = "mp-asset://";
 
 const IMAGE_EXT = /\.(png|jpe?g|gif|webp|svg|bmp|avif)$/i;
 
-// Obsidian callout 类型 → WeMD github-alert 支持的五种
+// Obsidian callout 类型 → github-alert 插件支持的五种
 const CALLOUT_MAP: Record<string, string> = {
   note: "NOTE",
   info: "NOTE",
@@ -86,7 +86,7 @@ export function preprocessObsidianMarkdown(
         const size = opt?.trim().match(/^(\d+)(?:x(\d+))?$/);
         const alt = size ? "" : (opt?.trim() ?? "");
         // 尺寸放进 URL 片段，避免输出 <img> 触发 markdown-it 的 HTML 块吞掉后续行
-        const sizeHash = size ? `#wemd-size=${size[1]}x${size[2] ?? ""}` : "";
+        const sizeHash = size ? `#mp-size=${size[1]}x${size[2] ?? ""}` : "";
         return `![${alt}](${encodeAsset(file.path)}${sizeHash})`;
       })
       // ![alt](relative/path.png) —— 仅处理非 http / data 的本地路径
@@ -113,7 +113,7 @@ export function preprocessObsidianMarkdown(
   );
 }
 
-/** 把渲染结果中的 wemd-asset:// 占位替换为实际地址 */
+/** 把渲染结果中的 mp-asset:// 占位替换为实际地址 */
 export async function resolveAssets(
   app: App,
   root: ParentNode,
@@ -128,7 +128,7 @@ export async function resolveAssets(
         .getAttribute("src")!
         .slice(ASSET_SCHEME.length)
         .split("#");
-      const size = hash.match(/^wemd-size=(\d+)x(\d*)$/);
+      const size = hash.match(/^mp-size=(\d+)x(\d*)$/);
       if (size) {
         // 主题 CSS 常写 width:100%，用内联样式覆盖
         img.style.setProperty("width", `${size[1]}px`);

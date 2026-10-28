@@ -5,7 +5,7 @@ import path from "node:path";
 
 const prod = process.argv[2] === "production";
 
-// WeMD core 按 markdown-it 12 的路径引用 lib/token 等；markdown-it 14 改成了 .mjs
+// src/core 按 markdown-it 12 的路径引用 lib/token 等；markdown-it 14 改成了 .mjs
 const markdownItLibPlugin = {
   name: "markdown-it-lib",
   setup(build) {

@@ -1,5 +1,5 @@
 export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘 */
-#wemd {
+#mp {
   max-width: 677px;
   margin: 0 auto;
   padding: 14px 20px;
@@ -13,7 +13,7 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   word-break: break-word;
 }
 
-#wemd p {
+#mp p {
   margin: 0 0 18px;
   color: #203047;
   font-size: 15px;
@@ -22,24 +22,24 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-wrap: pretty;
 }
 
-#wemd h1,
-#wemd h2,
-#wemd h3,
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h1,
+#mp h2,
+#mp h3,
+#mp h4,
+#mp h5,
+#mp h6 {
   padding: 0;
   text-align: left;
 }
 
-#wemd h1 {
+#mp h1 {
   margin: 18px 0 34px;
   padding: 27px 24px 25px;
   border: none;
   background: #102b4e;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
   color: #ffffff;
   font-size: 29px;
   font-weight: 800;
@@ -48,14 +48,14 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-wrap: balance;
 }
 
-#wemd h2 {
+#mp h2 {
   margin: 42px 0 20px;
   padding: 0 0 7px;
   border-bottom: 2px solid #173f7a;
   background: transparent;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
   color: #173f7a;
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 18px;
@@ -64,13 +64,13 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-wrap: balance;
 }
 
-#wemd h3 {
+#mp h3 {
   margin: 29px 0 14px;
   padding: 0;
   border: none;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
   display: inline-block;
   padding: 4px 8px;
   border: 1px solid #7790ac;
@@ -82,42 +82,42 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-wrap: balance;
 }
 
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h4,
+#mp h5,
+#mp h6 {
   margin: 28px 0 13px;
 }
 
-#wemd h4 .content,
-#wemd h5 .content,
-#wemd h6 .content {
+#mp h4 .content,
+#mp h5 .content,
+#mp h6 .content {
   color: #365777;
   font-size: 16px;
   font-weight: 700;
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix,
-#wemd h2 .prefix,
-#wemd h2 .suffix,
-#wemd h3 .prefix,
-#wemd h3 .suffix,
-#wemd h4 .prefix,
-#wemd h4 .suffix,
-#wemd h5 .prefix,
-#wemd h5 .suffix,
-#wemd h6 .prefix,
-#wemd h6 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix,
+#mp h2 .prefix,
+#mp h2 .suffix,
+#mp h3 .prefix,
+#mp h3 .suffix,
+#mp h4 .prefix,
+#mp h4 .suffix,
+#mp h5 .prefix,
+#mp h5 .suffix,
+#mp h6 .prefix,
+#mp h6 .suffix {
   display: none;
 }
 
-#wemd blockquote {
+#mp blockquote {
   border: none;
 }
 
-#wemd .multiquote-1,
-#wemd .multiquote-2,
-#wemd .multiquote-3 {
+#mp .multiquote-1,
+#mp .multiquote-2,
+#mp .multiquote-3 {
   margin: 26px 0;
   padding: 15px 4px;
   border-top: 1px dashed #7790ac;
@@ -125,9 +125,9 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   background: transparent;
 }
 
-#wemd .multiquote-1 p,
-#wemd .multiquote-2 p,
-#wemd .multiquote-3 p {
+#mp .multiquote-1 p,
+#mp .multiquote-2 p,
+#mp .multiquote-3 p {
   margin: 0;
   color: #314765;
   font-family: "SFMono-Regular", Consolas, monospace;
@@ -135,44 +135,44 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   line-height: 1.7;
 }
 
-#wemd .multiquote-2,
-#wemd .multiquote-3,
-#wemd .multiquote-1 .multiquote-1 {
+#mp .multiquote-2,
+#mp .multiquote-3,
+#mp .multiquote-1 .multiquote-1 {
   margin: 10px 0 0;
   padding: 8px 0 0 12px;
   border-top: 1px dotted #aebdce;
   border-bottom: none;
 }
 
-#wemd ul,
-#wemd ol {
+#mp ul,
+#mp ol {
   margin: 18px 0 24px;
   padding-left: 25px;
   color: #a84317;
 }
 
-#wemd ul {
+#mp ul {
   list-style-type: square;
 }
 
-#wemd ol {
+#mp ol {
   font-family: "SFMono-Regular", Consolas, monospace;
   list-style-type: decimal-leading-zero;
 }
 
-#wemd li section {
+#mp li section {
   margin: 6px 0;
   color: #203047;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   line-height: 1.68;
 }
 
-#wemd ol > li > section {
+#mp ol > li > section {
   padding: 3px 0 9px;
   border-bottom: 1px dotted #aebdce;
 }
 
-#wemd a {
+#mp a {
   color: #175da8;
   font-weight: 600;
   text-decoration: underline;
@@ -180,18 +180,18 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-underline-offset: 0.2em;
 }
 
-#wemd strong {
+#mp strong {
   color: #142e55;
   font-weight: 750;
 }
 
-#wemd mark {
+#mp mark {
   padding: 1px 4px;
   color: #633018;
   background: #f9d9c8;
 }
 
-#wemd hr {
+#mp hr {
   height: 0;
   margin: 38px 0;
   border: none;
@@ -199,17 +199,17 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   background: transparent;
 }
 
-#wemd figure {
+#mp figure {
   margin: 30px 0 36px;
   break-inside: avoid;
 }
 
-#wemd figure a {
+#mp figure a {
   border: none;
 }
 
-#wemd img,
-#wemd figure a img {
+#mp img,
+#mp figure a img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -219,7 +219,7 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   background: #ffffff;
 }
 
-#wemd figcaption {
+#mp figcaption {
   margin-top: 0;
   padding: 8px 10px;
   color: #536a84;
@@ -230,10 +230,10 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-align: left;
 }
 
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
   padding: 2px 6px;
   border: 1px solid #c7d2df;
   color: #174f8f;
@@ -242,7 +242,7 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   font-size: 13px;
 }
 
-#wemd pre {
+#mp pre {
   margin: 30px 0;
   border: 1px solid #173f7a;
   border-top: 6px solid #a84317;
@@ -250,8 +250,8 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   overflow-x: auto;
 }
 
-#wemd pre code,
-#wemd pre code.hljs {
+#mp pre code,
+#mp pre code.hljs {
   display: block;
   min-width: max-content;
   padding: 19px 20px;
@@ -263,18 +263,18 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   white-space: pre;
 }
 
-#wemd pre.custom > .mac-sign {
+#mp pre.custom > .mac-sign {
   display: block;
   border-bottom: 1px solid #35506e;
   background: #13233a;
 }
 
-#wemd .table-container {
+#mp .table-container {
   margin: 32px 0;
   overflow-x: auto;
 }
 
-#wemd table {
+#mp table {
   width: 100%;
   border-collapse: collapse;
   border: 2px solid #173f7a;
@@ -284,8 +284,8 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   text-align: left;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   min-width: 88px;
   padding: 11px 10px;
   border: 1px solid #c9d4e0;
@@ -293,17 +293,17 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   line-height: 1.6;
 }
 
-#wemd table tr th {
+#mp table tr th {
   color: #ffffff;
   background: #173f7a;
   font-weight: 700;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background: #f0f4f8;
 }
 
-#wemd .callout {
+#mp .callout {
   margin: 30px 0;
   padding: 17px 19px;
   border: 1px dashed #7790ac;
@@ -313,13 +313,13 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   break-inside: avoid;
 }
 
-#wemd .callout-warning,
-#wemd .callout-caution {
+#mp .callout-warning,
+#mp .callout-caution {
   border-color: #a84317;
   background: #fff0e8;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   margin-bottom: 7px;
   color: #173f7a;
   font-family: "SFMono-Regular", Consolas, monospace;
@@ -327,43 +327,43 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   font-weight: 750;
 }
 
-#wemd .callout p {
+#mp .callout p {
   margin: 0;
   font-size: 15px;
 }
 
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
   color: #175da8;
   font-weight: 700;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
   margin-top: 48px;
   padding-top: 16px;
   border-top: 6px solid #173f7a;
 }
 
-#wemd .footnote-item {
+#mp .footnote-item {
   display: flex;
   margin-top: 9px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   width: 30px;
   flex-shrink: 0;
   color: #a84317;
   font-weight: 700;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   margin: 0;
   color: #5b6e85;
   font-size: 13px;
   text-align: left;
 }
 
-#wemd .block-equation {
+#mp .block-equation {
   display: block;
   margin: 30px 0;
   padding: 18px 10px;
@@ -373,29 +373,29 @@ export const dataBlueprintTheme = `/* 数据蓝图：商业分析与数据复盘
   overflow-x: auto;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   max-width: 300% !important;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
   vertical-align: middle;
 }
 
-#wemd pre.mermaid {
+#mp pre.mermaid {
   padding: 20px 10px;
   border: 1px solid #aebdce;
   border-top: 6px solid #173f7a;
   background: #ffffff;
 }
 
-#wemd .task-list-item {
+#mp .task-list-item {
   display: flex;
   align-items: flex-start;
   margin-left: -1.2em;
   list-style: none;
 }
 
-#wemd .task-list-item input[type='checkbox'] {
+#mp .task-list-item input[type='checkbox'] {
   margin-top: 7px;
   margin-right: 8px;
   accent-color: #173f7a;

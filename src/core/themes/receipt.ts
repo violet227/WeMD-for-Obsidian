@@ -1,5 +1,5 @@
 export const receiptTheme = `/* 购物小票风格 */
-#wemd {
+#mp {
     padding: 5px 20px;
     max-width: 677px;
     margin: 0 auto;
@@ -15,7 +15,7 @@ export const receiptTheme = `/* 购物小票风格 */
 }
 
 /* 正文 */
-#wemd p {
+#mp p {
     margin: 18px 0;
     line-height: 1.6;
     text-align: justify;
@@ -27,7 +27,7 @@ export const receiptTheme = `/* 购物小票风格 */
  * 一级标题 - 店铺招牌风格
  * 改为：上下双虚线包裹，居中，加大字重
  */
-#wemd h1 {
+#mp h1 {
     margin: 40px 0 30px;
     text-align: center;
     border-top: 2px dashed #000;
@@ -35,7 +35,7 @@ export const receiptTheme = `/* 购物小票风格 */
     padding: 15px 0;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
     font-size: 26px;
     font-weight: 900;
     color: #000;
@@ -46,18 +46,18 @@ export const receiptTheme = `/* 购物小票风格 */
     /* 去除之前的下划线 */
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix {
     display: none;
 }
 
 /* 二级标题 - 分类栏 */
-#wemd h2 {
+#mp h2 {
     margin: 30px 0 20px;
     text-align: center;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -68,17 +68,17 @@ export const receiptTheme = `/* 购物小票风格 */
     padding: 8px;
 }
 
-#wemd h2 .prefix,
-#wemd h2 .suffix {
+#mp h2 .prefix,
+#mp h2 .suffix {
     display: none;
 }
 
 /* 三级标题 - 加粗项目 */
-#wemd h3 {
+#mp h3 {
     margin: 25px 0 10px;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
     font-size: 16px;
     font-weight: bold;
     border-bottom: 2px solid #000;
@@ -86,31 +86,31 @@ export const receiptTheme = `/* 购物小票风格 */
     display: inline-block;
 }
 
-#wemd h3 .prefix,
-#wemd h3 .suffix {
+#mp h3 .prefix,
+#mp h3 .suffix {
     display: none;
 }
 
 /* 四级标题 - 简单标签 */
-#wemd h4 {
+#mp h4 {
     margin: 20px 0 10px;
     text-align: left;
 }
 
-#wemd h4 .content {
+#mp h4 .content {
     font-size: 16px;
     font-weight: bold;
     color: #000;
     text-decoration: underline;
 }
 
-#wemd h4 .prefix,
-#wemd h4 .suffix {
+#mp h4 .prefix,
+#mp h4 .suffix {
     display: none;
 }
 
 /* 引用 - 备注框 */
-#wemd .multiquote-1 {
+#mp .multiquote-1 {
     margin: 25px 0;
     padding: 15px;
     border: 1px dotted #000;
@@ -120,43 +120,43 @@ export const receiptTheme = `/* 购物小票风格 */
     background: #f8f8f8;
 }
 
-#wemd .multiquote-1 p {
+#mp .multiquote-1 p {
     font-family: monospace;
     color: #444;
 }
 
-#wemd .multiquote-2 {
+#mp .multiquote-2 {
     margin: 22px 0;
     padding: 13px;
     border: 1px dashed #000;
     background: #fafafa;
 }
 
-#wemd .multiquote-2 p {
+#mp .multiquote-2 p {
     font-family: monospace;
     color: #444;
 }
 
-#wemd .multiquote-3 {
+#mp .multiquote-3 {
     margin: 20px 0;
     padding: 11px;
     border: 1px dotted #666;
     background: #fcfcfc;
 }
 
-#wemd .multiquote-3 p {
+#mp .multiquote-3 p {
     font-family: monospace;
     color: #444;
 }
 
 /* 列表 */
-#wemd ul {
+#mp ul {
     list-style: none;
     padding-left: 10px;
     margin: 20px 0;
 }
 
-#wemd ul li {
+#mp ul li {
     margin-bottom: 8px;
     border-bottom: 1px dotted #ccc;
     /* 下划线辅助阅读 */
@@ -165,48 +165,48 @@ export const receiptTheme = `/* 购物小票风格 */
 
 /* 伪元素挂在 li 内的 section 上：markdown-it-li 会把内容包进块级 section，
    挂在 li 上会让 [*] 单独占一行 */
-#wemd ul li > section::before {
+#mp ul li > section::before {
     content: "[*] ";
     /* 模拟字符列表 */
     font-weight: bold;
     margin-right: 5px;
 }
 
-#wemd ol {
+#mp ol {
     list-style: decimal;
     padding-left: 25px;
     margin: 20px 0;
     font-weight: bold;
 }
 
-#wemd li section {
+#mp li section {
     font-weight: normal;
     color: #222;
 }
 
-#wemd ul ul {
+#mp ul ul {
     list-style: none;
     margin-top: 6px;
 }
 
-#wemd ul ul li > section::before {
+#mp ul ul li > section::before {
     content: "[-] ";
     font-weight: bold;
 }
 
-#wemd ol ol {
+#mp ol ol {
     list-style-type: lower-alpha;
 }
 
 /* 链接 */
-#wemd a {
+#mp a {
     color: #000;
     text-decoration: underline;
     font-weight: bold;
 }
 
 /* 加粗 */
-#wemd strong {
+#mp strong {
     font-weight: 900;
     background: #ddd;
     /* 模拟灰色高亮打印 */
@@ -214,42 +214,42 @@ export const receiptTheme = `/* 购物小票风格 */
 }
 
 /* 斜体 */
-#wemd em {
+#mp em {
     font-style: italic;
     color: #000;
 }
 
 /* 加粗斜体 */
-#wemd em strong {
+#mp em strong {
     font-weight: 900;
     font-style: italic;
 }
 
 /* 高亮 - 灰色背景 */
-#wemd mark {
+#mp mark {
     background: #ddd;
     color: #000;
     padding: 0 4px;
 }
 
 /* 删除线 */
-#wemd del {
+#mp del {
     text-decoration: line-through;
     color: #666;
 }
 
 /* 分割线 - 虚线 */
-#wemd hr {
+#mp hr {
     margin: 30px 0;
     border: none;
     border-top: 2px dashed #000;
 }
 
 /* 行内代码 - 反色打印块 */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
     background: #000;
     color: #fff;
     font-family: monospace;
@@ -260,7 +260,7 @@ export const receiptTheme = `/* 购物小票风格 */
 }
 
 /* 图片 - 抖动边框 */
-#wemd img {
+#mp img {
     display: block;
     margin: 30px auto;
     width: 100%;
@@ -269,7 +269,7 @@ export const receiptTheme = `/* 购物小票风格 */
     background: #fff;
 }
 
-#wemd figcaption {
+#mp figcaption {
     margin-top: 8px;
     text-align: center;
     color: #000;
@@ -286,7 +286,7 @@ export const receiptTheme = `/* 购物小票风格 */
  * 3. 模拟虚线纸张
  */
 /* 代码块 - 注意：不要设置 color，让语法高亮主题控制文字颜色 */
-#wemd pre code.hljs {
+#mp pre code.hljs {
     background: #f4f4f4 !important;
     /* 强制浅灰背景 */
     /* color 由 .hljs 语法高亮主题控制 */
@@ -303,7 +303,7 @@ export const receiptTheme = `/* 购物小票风格 */
 }
 
 /* 如果没有语法高亮，设置默认黑色 */
-#wemd pre code:not(.hljs) {
+#mp pre code:not(.hljs) {
     color: #000 !important;
     background: #f4f4f4 !important;
     border: 2px dashed #000 !important;
@@ -312,13 +312,13 @@ export const receiptTheme = `/* 购物小票风格 */
 }
 
 /* 尝试隐藏 Mac 红绿灯 (如果编辑器是用伪元素实现的) */
-#wemd pre code::before {
+#mp pre code::before {
     content: "" !important;
     display: none !important;
 }
 
 /* 表格 - 价格单 */
-#wemd table {
+#mp table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -326,7 +326,7 @@ export const receiptTheme = `/* 购物小票风格 */
     font-family: monospace;
 }
 
-#wemd table tr th {
+#mp table tr th {
     border-bottom: 2px dashed #000;
     padding: 8px 5px;
     text-align: right;
@@ -334,48 +334,48 @@ export const receiptTheme = `/* 购物小票风格 */
     text-transform: uppercase;
 }
 
-#wemd table tr th:first-child {
+#mp table tr th:first-child {
     text-align: left;
 }
 
-#wemd table tr td {
+#mp table tr td {
     border-bottom: 1px dotted #000;
     padding: 8px 5px;
     text-align: right;
     color: #000;
 }
 
-#wemd table tr td:first-child {
+#mp table tr td:first-child {
     text-align: left;
 }
 
 /* 脚注 */
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
     color: #000;
     text-decoration: underline;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
     border-top: 2px dashed #000;
     margin-top: 30px;
     padding-top: 15px;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
     font-weight: bold;
     color: #000;
     margin-right: 4px;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
     color: #444;
     font-size: 13px;
     font-family: monospace;
 }
 
 /* 提示块 - 购物小票风格 */
-#wemd .callout {
+#mp .callout {
     margin: 25px 0;
     padding: 15px;
     border: 1px dotted #000;
@@ -383,7 +383,7 @@ export const receiptTheme = `/* 购物小票风格 */
     border-radius: 0;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
     font-weight: bold;
     margin-bottom: 8px;
     color: #000;
@@ -392,18 +392,18 @@ export const receiptTheme = `/* 购物小票风格 */
     font-size: 14px;
 }
 
-#wemd .callout-icon { margin-right: 8px;
+#mp .callout-icon { margin-right: 8px;
     margin-right: 6px;
 }
 
-#wemd .callout-note { border-left: 2px dashed #000; }
-#wemd .callout-tip { border-left: 2px dashed #000; }
-#wemd .callout-important { border-left: 2px dashed #000; }
-#wemd .callout-warning { border-left: 2px dashed #000; }
-#wemd .callout-caution { border-left: 2px dashed #000; }
+#mp .callout-note { border-left: 2px dashed #000; }
+#mp .callout-tip { border-left: 2px dashed #000; }
+#mp .callout-important { border-left: 2px dashed #000; }
+#mp .callout-warning { border-left: 2px dashed #000; }
+#mp .callout-caution { border-left: 2px dashed #000; }
 
 /* Imageflow CSS */
-#wemd .imageflow-layer1 {
+#mp .imageflow-layer1 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   /* white-space: normal; */
@@ -412,13 +412,13 @@ export const receiptTheme = `/* 购物小票风格 */
   overflow: hidden;
 }
 
-#wemd .imageflow-layer2 {
+#mp .imageflow-layer2 {
   white-space: nowrap;
   width: 100%;
   overflow-x: scroll;
 }
 
-#wemd .imageflow-layer3 {
+#mp .imageflow-layer3 {
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -428,7 +428,7 @@ export const receiptTheme = `/* 购物小票风格 */
   flex-shrink: 0;
 }
 
-#wemd .imageflow-img {
+#mp .imageflow-img {
   display: block;
   width: 100%;
   height: auto;
@@ -437,7 +437,7 @@ export const receiptTheme = `/* 购物小票风格 */
   border-radius: 4px;
 }
 
-#wemd .imageflow-caption {
+#mp .imageflow-caption {
   text-align: center;
   margin-top: 0px;
   padding-top: 0px;

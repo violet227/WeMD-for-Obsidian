@@ -1,5 +1,5 @@
 export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 */
-#wemd {
+#mp {
   max-width: 677px;
   margin: 0 auto;
   padding: 30px 24px;
@@ -12,7 +12,7 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   word-break: break-word;
 }
 
-#wemd p {
+#mp p {
   max-width: 34em;
   margin: 0 auto 31px;
   color: #3a3734;
@@ -22,7 +22,7 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-wrap: pretty;
 }
 
-#wemd h1 {
+#mp h1 {
   max-width: 12em;
   margin: 58px auto 96px;
   padding: 0;
@@ -30,7 +30,7 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-align: center;
 }
 
-#wemd h1 .content {
+#mp h1 .content {
   color: #2b2927;
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
   font-size: 38px;
@@ -40,13 +40,13 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-wrap: balance;
 }
 
-#wemd h2 {
+#mp h2 {
   max-width: 22em;
   margin: 78px auto 34px;
   text-align: left;
 }
 
-#wemd h2 .content {
+#mp h2 .content {
   display: block;
   padding: 0;
   border: none;
@@ -58,14 +58,14 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-wrap: balance;
 }
 
-#wemd h3 {
+#mp h3 {
   max-width: 34em;
   margin: 44px auto 20px;
   padding: 0;
   border: none;
 }
 
-#wemd h3 .content {
+#mp h3 .content {
   color: #80503f;
   font-size: 15px;
   font-weight: 700;
@@ -73,43 +73,43 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-wrap: balance;
 }
 
-#wemd h4,
-#wemd h5,
-#wemd h6 {
+#mp h4,
+#mp h5,
+#mp h6 {
   max-width: 40em;
   margin: 30px auto 15px;
 }
 
-#wemd h4 .content,
-#wemd h5 .content,
-#wemd h6 .content {
+#mp h4 .content,
+#mp h5 .content,
+#mp h6 .content {
   color: #625b55;
   font-size: 16px;
   font-weight: 650;
 }
 
-#wemd h1 .prefix,
-#wemd h1 .suffix,
-#wemd h2 .prefix,
-#wemd h2 .suffix,
-#wemd h3 .prefix,
-#wemd h3 .suffix,
-#wemd h4 .prefix,
-#wemd h4 .suffix,
-#wemd h5 .prefix,
-#wemd h5 .suffix,
-#wemd h6 .prefix,
-#wemd h6 .suffix {
+#mp h1 .prefix,
+#mp h1 .suffix,
+#mp h2 .prefix,
+#mp h2 .suffix,
+#mp h3 .prefix,
+#mp h3 .suffix,
+#mp h4 .prefix,
+#mp h4 .suffix,
+#mp h5 .prefix,
+#mp h5 .suffix,
+#mp h6 .prefix,
+#mp h6 .suffix {
   display: none;
 }
 
-#wemd blockquote {
+#mp blockquote {
   border: none;
 }
 
-#wemd .multiquote-1,
-#wemd .multiquote-2,
-#wemd .multiquote-3 {
+#mp .multiquote-1,
+#mp .multiquote-2,
+#mp .multiquote-3 {
   margin: 62px 0;
   padding: 38px 28px;
   border: none;
@@ -117,9 +117,9 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   break-inside: avoid;
 }
 
-#wemd .multiquote-1 p,
-#wemd .multiquote-2 p,
-#wemd .multiquote-3 p {
+#mp .multiquote-1 p,
+#mp .multiquote-2 p,
+#mp .multiquote-3 p {
   margin: 0 auto;
   color: #f7f6f4;
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
@@ -129,9 +129,9 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-align: center;
 }
 
-#wemd .multiquote-2,
-#wemd .multiquote-3,
-#wemd .multiquote-1 .multiquote-1 {
+#mp .multiquote-2,
+#mp .multiquote-3,
+#mp .multiquote-1 .multiquote-1 {
   margin: 18px 0 0;
   padding: 14px 0 0;
   border: none;
@@ -139,44 +139,44 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   background: transparent;
 }
 
-#wemd ul,
-#wemd ol {
+#mp ul,
+#mp ol {
   max-width: 38em;
   margin: 24px auto 31px;
   padding-left: 25px;
   color: #8b4c3b;
 }
 
-#wemd li section {
+#mp li section {
   margin: 7px 0;
   color: #3a3734;
   line-height: 1.85;
 }
 
-#wemd ol > li > section {
+#mp ol > li > section {
   padding-bottom: 4px;
   border: none;
 }
 
-#wemd a {
+#mp a {
   color: #80503f;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 0.23em;
 }
 
-#wemd strong {
+#mp strong {
   color: #2b2927;
   font-weight: 750;
 }
 
-#wemd mark {
+#mp mark {
   padding: 1px 4px;
   color: #4c382f;
   background: #eadbd5;
 }
 
-#wemd hr {
+#mp hr {
   width: 1px;
   height: 64px;
   margin: 72px auto;
@@ -184,24 +184,24 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   background: #2b2927;
 }
 
-#wemd figure {
+#mp figure {
   margin: 72px 0 80px;
   break-inside: avoid;
 }
 
-#wemd figure a {
+#mp figure a {
   border: none;
 }
 
-#wemd img,
-#wemd figure a img {
+#mp img,
+#mp figure a img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
-#wemd figcaption {
+#mp figcaption {
   max-width: 34em;
   margin: 16px auto 0;
   padding-top: 9px;
@@ -213,10 +213,10 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-align: left;
 }
 
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
   padding: 2px 5px;
   border-bottom: 1px solid #a7a29d;
   color: #5c4740;
@@ -225,15 +225,15 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   font-size: 13px;
 }
 
-#wemd pre {
+#mp pre {
   margin: 38px 0;
   border: 1px solid #2b2927;
   background: #2b2927;
   overflow-x: auto;
 }
 
-#wemd pre code,
-#wemd pre code.hljs {
+#mp pre code,
+#mp pre code.hljs {
   display: block;
   min-width: max-content;
   padding: 21px;
@@ -245,18 +245,18 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   white-space: pre;
 }
 
-#wemd pre.custom > .mac-sign {
+#mp pre.custom > .mac-sign {
   display: block;
   border-bottom: 1px solid #57524e;
   background: #2b2927;
 }
 
-#wemd .table-container {
+#mp .table-container {
   margin: 39px 0;
   overflow-x: auto;
 }
 
-#wemd table {
+#mp table {
   width: 100%;
   border-collapse: collapse;
   color: #3a3734;
@@ -264,8 +264,8 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   text-align: left;
 }
 
-#wemd table tr th,
-#wemd table tr td {
+#mp table tr th,
+#mp table tr td {
   min-width: 88px;
   padding: 11px 9px;
   border: none;
@@ -274,7 +274,7 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   line-height: 1.65;
 }
 
-#wemd table tr th {
+#mp table tr th {
   border-top: 3px solid #2b2927;
   border-bottom: 2px solid #2b2927;
   color: #2b2927;
@@ -282,11 +282,11 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   font-weight: 750;
 }
 
-#wemd table tr:nth-child(2n) {
+#mp table tr:nth-child(2n) {
   background: transparent;
 }
 
-#wemd .callout {
+#mp .callout {
   max-width: 34em;
   margin: 52px auto;
   padding: 24px 0;
@@ -299,56 +299,56 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   break-inside: avoid;
 }
 
-#wemd .callout-warning,
-#wemd .callout-caution {
+#mp .callout-warning,
+#mp .callout-caution {
   border-color: #8b4c3b;
   background: transparent;
 }
 
-#wemd .callout-title {
+#mp .callout-title {
   margin-bottom: 8px;
   color: #2b2927;
   font-weight: 700;
 }
 
-#wemd .callout p {
+#mp .callout p {
   margin: 0;
   color: #5e5751;
   font-size: 15px;
 }
 
-#wemd .footnote-word,
-#wemd .footnote-ref {
+#mp .footnote-word,
+#mp .footnote-ref {
   color: #80503f;
   font-weight: 700;
 }
 
-#wemd .footnotes-sep {
+#mp .footnotes-sep {
   margin-top: 57px;
   padding-top: 18px;
   border-top: 1px solid #2b2927;
 }
 
-#wemd .footnote-item {
+#mp .footnote-item {
   display: flex;
   max-width: 40em;
   margin: 10px auto 0;
 }
 
-#wemd .footnote-num {
+#mp .footnote-num {
   width: 30px;
   flex-shrink: 0;
   color: #80503f;
 }
 
-#wemd .footnote-item p {
+#mp .footnote-item p {
   margin: 0;
   color: #77706a;
   font-size: 13px;
   text-align: left;
 }
 
-#wemd .block-equation {
+#mp .block-equation {
   display: block;
   margin: 38px 0;
   padding: 20px 10px;
@@ -358,29 +358,29 @@ export const whitespaceGalleryTheme = `/* 留白画册：图片与人物故事 *
   overflow-x: auto;
 }
 
-#wemd .block-equation > svg {
+#mp .block-equation > svg {
   max-width: 300% !important;
 }
 
-#wemd .inline-equation > svg {
+#mp .inline-equation > svg {
   vertical-align: middle;
 }
 
-#wemd pre.mermaid {
+#mp pre.mermaid {
   padding: 22px 10px;
   border: 1px solid #aaa49f;
   border-top: 4px solid #2b2927;
   background: #ffffff;
 }
 
-#wemd .task-list-item {
+#mp .task-list-item {
   display: flex;
   align-items: flex-start;
   margin-left: -1.2em;
   list-style: none;
 }
 
-#wemd .task-list-item input[type='checkbox'] {
+#mp .task-list-item input[type='checkbox'] {
   margin-top: 8px;
   margin-right: 8px;
   accent-color: #2b2927;

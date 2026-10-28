@@ -1,46 +1,46 @@
 export const modernEditorialContentTheme = `/* 行内强调 */
-#wemd a {
+#mp a {
   color: #9f4828;
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid #d59a7f;
 }
 
-#wemd strong {
+#mp strong {
   color: #242720;
   font-weight: 700;
   border-bottom: 2px solid #dfa187;
 }
 
-#wemd em {
+#mp em {
   color: #646858;
   font-style: italic;
 }
 
-#wemd em strong {
+#mp em strong {
   color: #242720;
   font-weight: 700;
   font-style: italic;
 }
 
-#wemd mark {
+#mp mark {
   padding: 1px 4px;
   color: #392e27;
   background: #f1d8c9;
 }
 
-#wemd del {
+#mp del {
   color: #8b8d84;
   text-decoration: line-through;
 }
 
-#wemd u {
+#mp u {
   text-decoration-color: #c76237;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
 }
 
-#wemd hr {
+#mp hr {
   width: 84px;
   height: 5px;
   margin: 54px auto;
@@ -49,19 +49,19 @@ export const modernEditorialContentTheme = `/* 行内强调 */
 }
 
 /* 图片版式 */
-#wemd figure {
+#mp figure {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   margin: 40px 4px 44px 0;
 }
 
-#wemd figure a {
+#mp figure a {
   border: none;
 }
 
-#wemd img,
-#wemd figure a img {
+#mp img,
+#mp figure a img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -73,7 +73,7 @@ export const modernEditorialContentTheme = `/* 行内强调 */
   box-shadow: 8px 8px 0 #deddd4;
 }
 
-#wemd figcaption {
+#mp figcaption {
   margin-top: 16px;
   padding-left: 13px;
   border-left: 3px solid #c76237;
@@ -85,10 +85,10 @@ export const modernEditorialContentTheme = `/* 行内强调 */
 }
 
 /* 行内代码 */
-#wemd p code,
-#wemd li code,
-#wemd td code,
-#wemd th code {
+#mp p code,
+#mp li code,
+#mp td code,
+#mp th code {
   margin: 0 2px;
   padding: 2px 6px;
   border: 1px solid #d2d1c7;

@@ -1,0 +1,40 @@
+import type { Theme } from '../../types'
+import { hljsLight } from '../../hljs-maps'
+
+/** 极简白 */
+export const theme: Theme = {
+  id: 'minimal-white',
+  name: '极简白',
+  description: '万能默认，干净不出错',
+  category: 'daily',
+  previewBackground: '#ffffff',
+  hljsStyleMap: hljsLight,
+  styles: {
+    root: 'color:#2f2f2f;font-size:15px;line-height:1.8;letter-spacing:0.3px;word-break:break-word;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;',
+    h1: 'margin:1.8em 0 0.9em;font-size:1.6em;font-weight:700;color:#1a1a1a;text-align:center;',
+    h2: 'margin:1.6em 0 0.8em;font-size:1.32em;font-weight:700;color:#1a1a1a;border-bottom:1px solid #eaeaea;padding-bottom:0.35em;',
+    h3: 'margin:1.4em 0 0.6em;font-size:1.15em;font-weight:600;color:#1f1f1f;',
+    h4: 'margin:1.3em 0 0.5em;font-size:1.05em;font-weight:600;color:#1f1f1f;',
+    h5: 'margin:1.2em 0 0.4em;font-size:1em;font-weight:600;color:#333333;',
+    h6: 'margin:1.1em 0 0.4em;font-size:0.92em;font-weight:600;color:#8a8a8a;',
+    p: 'margin:1em 0;',
+    a: 'color:#1e80ff;text-decoration:none;border-bottom:1px solid rgba(30,128,255,0.35);',
+    strong: 'font-weight:700;color:#1a1a1a;',
+    em: 'font-style:italic;',
+    del: 'text-decoration:line-through;color:#b0b0b0;',
+    ul: 'margin:1em 0;padding-left:1.6em;',
+    ol: 'margin:1em 0;padding-left:1.6em;',
+    li: 'margin:0.4em 0;',
+    blockquote: 'margin:1.4em 0;padding:0.8em 1.1em;border-left:4px solid #d9d9d9;background:#f7f7f7;color:#666666;',
+    code: 'background:#f2f2f2;color:#c7254e;padding:2px 6px;border-radius:4px;font-size:0.88em;font-family:"SFMono-Regular",Consolas,Menlo,monospace;',
+    codeBlock: 'font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:13px;line-height:1.7;color:#2f2f2f;',
+    codeBlockWrapper: 'background:#f7f8fa;padding:16px;border-radius:8px;overflow-x:auto;margin:1.4em 0;',
+    table: 'border-collapse:collapse;margin:1.4em 0;width:100%;font-size:0.95em;',
+    thead: '',
+    th: 'border:1px solid #eaeaea;background:#f7f7f7;padding:9px 13px;font-weight:600;color:#333333;',
+    td: 'border:1px solid #eaeaea;padding:9px 13px;',
+    tr: '',
+    img: 'max-width:100%;border-radius:6px;display:block;margin:1.4em auto;',
+    hr: 'border:none;border-top:1px solid #eaeaea;margin:2.2em 0;',
+  },
+}
