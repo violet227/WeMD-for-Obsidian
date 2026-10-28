@@ -250,9 +250,12 @@ export async function copyToWechat(
 
     // 先清空，避免把剪贴板里的旧 HTML 误判为本次复制成功
     getElectronClipboard()?.clear();
+    // 一律走精确 HTML 传输（直接写入 container.innerHTML），不再依赖浏览器
+    // 选区序列化。否则 Chromium 在序列化选区时会把文档级样式表里残留的
+    // text-align:start/end 一并写进剪贴板 <style> 块，触发微信「内容结构检测」
+    // 关于 start/end 的对齐异常告警。
     let copied =
-      copyViaNativeExecCommand(container, rendered.requiresExactHtmlTransport) &&
-      clipboardHasHtml();
+      copyViaNativeExecCommand(container, true) && clipboardHasHtml();
 
     if (!copied) {
       console.warn("[WeMD] 选区复制未写入 HTML，改用 Electron 剪贴板");

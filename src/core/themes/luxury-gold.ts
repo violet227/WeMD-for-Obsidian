@@ -255,7 +255,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 /* 图片 - 纯净留白 */
 #wemd img {
     display: block;
-    margin: 50px auto;
+    margin: 10px auto;
     width: 100%;
     /* 极淡的阴影，几乎看不见，增加一点立体感 */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
@@ -321,7 +321,7 @@ export const luxuryGoldTheme = `/* 黑金奢华风格 */
 #wemd table {
     width: 100%;
     border-collapse: collapse;
-    margin: 40px 0;
+    margin: 16px 0;
     font-size: 14px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;

@@ -260,16 +260,13 @@ export const basicTheme = `/* 默认样式，最佳实践 */
 /* 图片 */
 #wemd figure {
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-/* 图片描述文字 */
+/* 图片描述文字：全局不显示图注，避免图片下方出现注释/占位空白 */
 #wemd figcaption {
-  margin-top: 5px;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
+  display: none;
 }
 
 

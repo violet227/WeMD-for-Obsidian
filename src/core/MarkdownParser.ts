@@ -110,7 +110,7 @@ export const createMarkdownParser = (options: MarkdownParserOptions = {}) => {
       markerPattern: /^\[toc\]/im,
     })
     .use(markdownItRuby)
-    .use(markdownItImplicitFigures, { figcaption: true })
+    .use(markdownItImplicitFigures, { figcaption: false })
     .use(markdownItDeflist)
     .use(markdownItLiReplacer)
     .use(markdownItImageFlow)

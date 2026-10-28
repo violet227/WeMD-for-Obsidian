@@ -228,7 +228,7 @@ export const customDefaultTheme = `/* 默认主题 · 翡翠刊读
 /* 图片 */
 #wemd img {
   display: block;
-  margin: 24px auto;
+  margin: 6px auto;
   max-width: 100%;
   border-radius: 6px;
 }
