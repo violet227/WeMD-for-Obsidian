@@ -1,10 +1,10 @@
 /**
  * 微信复制 DOM 容器规范化
  * 处理微信公众号编辑器对粘贴 HTML 的清洗兼容问题：
- * - 连续背景保留 root section，其余场景转换为 div
+ * - 有背景（背景图或不透明背景色）时保留 root section，其余场景转换为 div
  * - 元数据属性清理
  * - 无连续背景时将根节点 padding 迁移到内层元素
- * - 无连续背景时将背景色下沉到子块
+ * - 无根背景时清理子块背景，避免公众号默认样式干扰
  */
 import { materializeCodeLineBreaksForWechat } from "./wechatCodeBlockCompat";
 import {
