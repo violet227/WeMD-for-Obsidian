@@ -10,10 +10,13 @@ export const morandiForestTheme = `/* 莫兰迪森林风格 */
   word-break: break-word;
 }
 
-/* 段落 */
+/* 段落：自身外边距归零，段落间距由 p + p 显式给出（26px）。
+   这样文字↔图片、文字↔表格的间距可直接归零，且不受公众号剥离 figure / .table-container
+   包裹层的影响——此前用「包裹层负边距抵消段落 26px 下边距」的做法在公众号里会失效：
+   公众号粘贴时会剥离包裹层，负边距随之丢失，只剩段落 26px 下边距，于是在公众号里出现大段
+   空白（预览却正常）。 */
 #mp p {
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin: 0;
   line-height: 2.0;
   letter-spacing: 0.5px;
   text-align: justify;
@@ -21,17 +24,22 @@ export const morandiForestTheme = `/* 莫兰迪森林风格 */
   font-size: 16px;
 }
 
-/* 图片、表格前后的段落收紧间距。段落上下 26px 的外边距会和图片/表格的外边距折叠，
-   只改图片/表格自身不会让间距变小；这里把紧跟在图片/表格后的段落上边距压到 6px，
-   图片/表格用负的上边距抵消前一段落的下边距 */
-#mp figure + p,
-#mp .table-container + p {
-  margin-top: 6px;
+#mp p + p {
+  margin-top: 26px;
 }
 
-#mp p + figure,
-#mp p + .table-container {
-  margin-top: -20px;
+/* 包裹层不额外增加间距（防御：无论公众号保留还是剥离包裹层，文字↔媒体都为 0） */
+#mp figure,
+#mp .table-container {
+  margin: 0;
+}
+
+/* 图片、表格与后续段落之间也不留空白 */
+#mp figure + p,
+#mp .table-container + p,
+#mp img + p,
+#mp table + p {
+  margin-top: 0;
 }
 
 /* 一级标题 */
@@ -198,6 +206,13 @@ export const morandiForestTheme = `/* 莫兰迪森林风格 */
   font-family: "KaiTi", "STKaiti", serif;
 }
 
+/* 引用框内部段落不受全局 p + p 规则影响，避免框内多出 26px 间距 */
+#mp .multiquote-1 p + p,
+#mp .multiquote-2 p + p,
+#mp .multiquote-3 p + p {
+  margin-top: 0;
+}
+
 /* 链接 */
 #mp a {
   color: #4F6F52;
@@ -257,7 +272,7 @@ export const morandiForestTheme = `/* 莫兰迪森林风格 */
 /* 图片 */
 #mp img {
   display: block;
-  margin: 6px auto;
+  margin: 0 auto;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 8px 20px rgba(79, 111, 82, 0.15);
@@ -319,7 +334,7 @@ export const morandiForestTheme = `/* 莫兰迪森林风格 */
 #mp table {
   width: 100%;
   border-collapse: collapse;
-  margin: 12px 0;
+  margin: 0;
   font-size: 14px;
   border: 1px solid #D2D4D4;
   /* 已修正 */
